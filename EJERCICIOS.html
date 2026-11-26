@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Grupos Musculares | FITNESSGYM</title>
+
+    <link rel="stylesheet" href="EJERCICIOS.css" />
+
+    <script src="EJERCICIOS.js" defer></script>
+  </head>
+
+  <body>
+    <!-- =========================
+         ENCABEZADO
+    ========================== -->
+
+    <header class="ENCABEZADO">
+      <a href="FITNESS.html" class="LOGO"> FITNESS<span>GYM</span> </a>
+
+      <nav class="NAVEGACION" id="NAVEGACION">
+        <a href="FITNESS.html">INICIO</a>
+        <a href="TIENDA.html">TIENDA</a>
+        <a href="RUTINA.html">RUTINAS</a>
+        <a href="SISTEMAS.html">SISTEMAS</a>
+        <a href="EJERCICIOS.html" class="ACTUAL"> EJERCICIOS </a>
+      </nav>
+
+      <button
+        class="BOTON-MENU"
+        id="BOTON-MENU"
+        type="button"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+    </header>
+
+    <!-- =========================
+         PORTADA
+    ========================== -->
+
+    <section class="PORTADA">
+      <p class="ETIQUETA">FITNESSGYM / ANATOMÍA Y ENTRENAMIENTO</p>
+
+      <h1>GRUPOS <span>MUSCULARES</span></h1>
+
+      <p>
+        Conocé los principales grupos musculares, comprendé sus funciones y
+        descubrí ejercicios para desarrollar cada zona del cuerpo.
+      </p>
+    </section>
+
+    <!-- =========================
+         CONTENIDO PRINCIPAL
+    ========================== -->
+
+    <main class="CONTENEDOR">
+      <!-- =========================
+             INTRODUCCIÓN
+        ========================== -->
+
+      <section class="INTRODUCCION">
+        <div>
+          <p class="ETIQUETA">EXPLORADOR MUSCULAR</p>
+
+          <h2>Conocé tu cuerpo</h2>
+
+          <p>
+            Seleccioná una región corporal para explorar sus principales grupos
+            musculares.
+          </p>
+        </div>
+      </section>
+
+      <!-- =========================
+             SELECTOR DE REGIONES
+        ========================== -->
+
+      <section class="SELECTOR-REGIONES">
+        <button class="BOTON-REGION ACTIVO" data-region="SUPERIOR">
+          TREN SUPERIOR
+        </button>
+
+        <button class="BOTON-REGION" data-region="INFERIOR">
+          TREN INFERIOR
+        </button>
+
+        <button class="BOTON-REGION" data-region="CORE">
+          ZONA MEDIA / CORE
+        </button>
+      </section>
+
+      <!-- =========================
+             EXPLORADOR
+        ========================== -->
+
+      <section class="EXPLORADOR">
+        <!-- TARJETAS MUSCULARES -->
+
+        <div class="SECCION-MUSCULOS">
+          <div class="CABECERA-MUSCULOS">
+            <div>
+              <p class="ETIQUETA">SELECCIONÁ UN GRUPO</p>
+
+              <h2 id="TITULO-REGION">TREN SUPERIOR</h2>
+            </div>
+
+            <span id="CANTIDAD-MUSCULOS"> 0 GRUPOS </span>
+          </div>
+
+          <div class="GRILLA-MUSCULOS" id="GRILLA-MUSCULOS">
+            <!-- LAS TARJETAS SE GENERAN CON JAVASCRIPT -->
+          </div>
+        </div>
+
+        <!-- PANEL DE INFORMACIÓN -->
+
+        <aside class="PANEL-MUSCULAR" id="PANEL-MUSCULAR">
+          <div class="PANEL-INTRODUCCION">
+            <p class="ETIQUETA">INFORMACIÓN MUSCULAR</p>
+
+            <h2 id="NOMBRE-MUSCULO">SELECCIONÁ UN MÚSCULO</h2>
+
+            <p id="DESCRIPCION-MUSCULO">
+              Elegí una tarjeta para conocer su ubicación, función y ejercicios.
+            </p>
+          </div>
+
+          <div class="DATOS-MUSCULO">
+            <div class="DATO">
+              <span>REGIÓN</span>
+
+              <strong id="DATO-REGION"> — </strong>
+            </div>
+
+            <div class="DATO">
+              <span>FUNCIÓN</span>
+
+              <strong id="DATO-FUNCION"> — </strong>
+            </div>
+
+            <div class="DATO">
+              <span>UBICACIÓN</span>
+
+              <strong id="DATO-UBICACION"> — </strong>
+            </div>
+          </div>
+
+          <div class="SECCION-EJERCICIOS">
+            <p class="ETIQUETA">EJERCICIOS RECOMENDADOS</p>
+
+            <div class="LISTA-EJERCICIOS" id="LISTA-EJERCICIOS">
+              <p class="MENSAJE-VACIO">
+                Los ejercicios aparecerán cuando selecciones un músculo.
+              </p>
+            </div>
+          </div>
+
+          <div class="CONSEJO-TECNICO">
+            <strong>CONSEJO TÉCNICO</strong>
+
+            <p id="CONSEJO-MUSCULAR">
+              Seleccioná un grupo muscular para visualizar recomendaciones.
+            </p>
+          </div>
+        </aside>
+      </section>
+
+      <!-- =========================
+             INFORMACIÓN GENERAL
+        ========================== -->
+
+      <section class="INFORMACION-GENERAL">
+        <div>
+          <p class="ETIQUETA">APRENDÉ A ENTRENAR</p>
+
+          <h2>No se trata solamente de levantar peso.</h2>
+
+          <p>
+            Comprender la función de los músculos permite organizar mejor los
+            ejercicios, reconocer los movimientos y desarrollar una
+            planificación de entrenamiento más completa.
+          </p>
+        </div>
+
+        <div class="CARACTERISTICAS">
+          <article class="CARACTERISTICA">
+            <span>01</span>
+
+            <h3>ANATOMÍA</h3>
+
+            <p>Identificá los músculos y su ubicación dentro del cuerpo.</p>
+          </article>
+
+          <article class="CARACTERISTICA">
+            <span>02</span>
+
+            <h3>MOVIMIENTO</h3>
+
+            <p>Comprendé qué acciones realizan durante el entrenamiento.</p>
+          </article>
+
+          <article class="CARACTERISTICA">
+            <span>03</span>
+
+            <h3>EJERCICIOS</h3>
+
+            <p>Conocé movimientos que permiten trabajar cada grupo muscular.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- =========================
+             AVISO
+        ========================== -->
+
+      <div class="AVISO">
+        <strong>IMPORTANTE:</strong>
+
+        Los ejercicios presentados son ejemplos educativos. La selección,
+        técnica, carga y cantidad de trabajo deben adaptarse a las
+        características y capacidades de cada persona.
+      </div>
+    </main>
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="PIE-PAGINA">FITNESSGYM © 2026 · PROYECTO ACADÉMICO</footer>
+  </body>
+</html>

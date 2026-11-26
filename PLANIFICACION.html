@@ -1,0 +1,686 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>FITNESSGYM | PLANIFICACIÓN</title>
+
+    <link rel="stylesheet" href="PLANIFICACION.css" />
+  </head>
+
+  <body>
+    <!-- CONTENEDOR GENERAL -->
+
+    <div class="PANEL-ADMINISTRATIVO">
+      <!-- BARRA LATERAL -->
+
+      <aside class="BARRA-LATERAL">
+        <div class="LOGO-PANEL">
+          <h1>FITNESS<span>GYM</span></h1>
+
+          <p>ADMINISTRACIÓN</p>
+        </div>
+
+        <div class="MENU-ADMINISTRATIVO">
+          <h3>MENÚ PRINCIPAL</h3>
+
+          <nav class="OPCIONES-ADMINISTRATIVAS">
+            <a href="#RESUMEN" class="OPCION-MENU ACTIVO">
+              <span>▦</span>
+              RESUMEN
+            </a>
+
+            <a href="#ATLETAS" class="OPCION-MENU">
+              <span>♙</span>
+              ATLETAS
+            </a>
+
+            <a href="#PLANIFICACIONES" class="OPCION-MENU">
+              <span>▤</span>
+              PLANIFICACIONES
+            </a>
+
+            <a href="#SEGUIMIENTO" class="OPCION-MENU">
+              <span>◷</span>
+              SEGUIMIENTO
+            </a>
+          </nav>
+        </div>
+
+        <div class="MENU-INFERIOR">
+          <a href="RUTINA.html" class="BOTON-VOLVER"> ← VOLVER A RUTINAS </a>
+
+          <p>FITNESSGYM © 2026</p>
+        </div>
+      </aside>
+
+      <!-- CONTENIDO DEL PANEL -->
+
+      <main class="CONTENIDO-ADMINISTRATIVO">
+        <!-- ENCABEZADO -->
+
+        <header class="ENCABEZADO-PANEL">
+          <div>
+            <h2>Panel administrativo</h2>
+
+            <p>Gestioná tus atletas y entrenamientos.</p>
+          </div>
+
+          <div class="INFORMACION-ENCABEZADO">
+            <span class="ESTADO-ADMINISTRADOR"> ● PERSONAL TRAINER </span>
+
+            <span id="FECHA-ACTUAL"></span>
+          </div>
+        </header>
+
+        <!-- RESUMEN GENERAL -->
+
+        <section class="SECCION-PANEL" id="RESUMEN">
+          <div class="TITULO-PANEL">
+            <div>
+              <span>INFORMACIÓN GENERAL</span>
+
+              <h2>RESUMEN</h2>
+            </div>
+          </div>
+
+          <div class="CONTENEDOR-INDICADORES">
+            <article class="TARJETA-INDICADOR">
+              <div class="ICONO-INDICADOR">♙</div>
+
+              <p>TOTAL DE ATLETAS</p>
+
+              <h3 id="TOTAL-ATLETAS">0</h3>
+
+              <span>Registros realizados</span>
+            </article>
+
+            <article class="TARJETA-INDICADOR">
+              <div class="ICONO-INDICADOR">✓</div>
+
+              <p>ATLETAS ACTIVOS</p>
+
+              <h3 id="ATLETAS-ACTIVOS">0</h3>
+
+              <span>Actualmente entrenando</span>
+            </article>
+
+            <article class="TARJETA-INDICADOR">
+              <div class="ICONO-INDICADOR">▤</div>
+
+              <p>PLANIFICACIONES</p>
+
+              <h3 id="TOTAL-PLANIFICACIONES">0</h3>
+
+              <span>Planes registrados</span>
+            </article>
+
+            <article class="TARJETA-INDICADOR">
+              <div class="ICONO-INDICADOR">◷</div>
+
+              <p>SEGUIMIENTOS</p>
+
+              <h3 id="TOTAL-SEGUIMIENTOS">0</h3>
+
+              <span>Controles registrados</span>
+            </article>
+          </div>
+        </section>
+
+        <!-- ADMINISTRACIÓN DE ATLETAS -->
+
+        <section class="SECCION-PANEL" id="ATLETAS">
+          <div class="TITULO-ATLETAS">
+            <div>
+              <span>GESTIÓN DE DEPORTISTAS</span>
+
+              <h2>ATLETAS REGISTRADOS</h2>
+
+              <p>Administrá y consultá la información de tus atletas.</p>
+            </div>
+
+            <button class="BOTON-AGREGAR" id="AGREGAR-ATLETA">
+              + AGREGAR ATLETA
+            </button>
+          </div>
+
+          <!-- BUSCADOR Y FILTROS -->
+
+          <div class="HERRAMIENTAS-ATLETAS">
+            <input
+              type="search"
+              id="BUSCADOR-ATLETAS"
+              placeholder="Buscar atleta..."
+            />
+
+            <select id="FILTRO-OBJETIVO">
+              <option value="">TODOS LOS OBJETIVOS</option>
+
+              <option value="HIPERTROFIA">HIPERTROFIA</option>
+
+              <option value="FUERZA">FUERZA</option>
+
+              <option value="RESISTENCIA">RESISTENCIA</option>
+
+              <option value="DEFINICION">DEFINICIÓN</option>
+            </select>
+
+            <select id="FILTRO-ESTADO">
+              <option value="">TODOS LOS ESTADOS</option>
+
+              <option value="ACTIVO">ACTIVO</option>
+
+              <option value="INACTIVO">INACTIVO</option>
+            </select>
+          </div>
+
+          <!-- LISTADO DE ATLETAS -->
+
+          <div class="CONTENEDOR-ATLETAS" id="LISTADO-ATLETAS">
+            <!-- LOS ATLETAS SE GENERARÁN CON JAVASCRIPT -->
+
+            <div class="MENSAJE-VACIO">
+              <span>♙</span>
+
+              <h3>TODAVÍA NO HAY ATLETAS</h3>
+
+              <p>
+                Agregá tu primer atleta para comenzar a organizar sus
+                entrenamientos.
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- VENTANA DE REGISTRO DE ATLETAS -->
+
+        <div class="FONDO-MODAL" id="MODAL-ATLETA">
+          <div class="CONTENEDOR-MODAL">
+            <div class="ENCABEZADO-MODAL">
+              <div>
+                <span>GESTIÓN DE DEPORTISTAS</span>
+                <h2 id="TITULO-MODAL">REGISTRAR ATLETA</h2>
+                <p>Completá la información del deportista.</p>
+              </div>
+
+              <button type="button" id="CERRAR-MODAL">✕</button>
+            </div>
+
+            <form id="FORMULARIO-ATLETA">
+              <div class="GRUPO-FORMULARIO">
+                <label for="NOMBRE-ATLETA">Nombre</label>
+                <input type="text" id="NOMBRE-ATLETA" required />
+              </div>
+
+              <div class="GRUPO-FORMULARIO">
+                <label for="APELLIDO-ATLETA">Apellido</label>
+                <input type="text" id="APELLIDO-ATLETA" required />
+              </div>
+
+              <div class="GRUPO-FORMULARIO">
+                <label for="FECHA-NACIMIENTO">Fecha de nacimiento</label>
+                <input type="date" id="FECHA-NACIMIENTO" required />
+              </div>
+
+              <div class="GRUPO-FORMULARIO">
+                <label for="PESO-ATLETA">Peso (kg)</label>
+                <input
+                  type="number"
+                  id="PESO-ATLETA"
+                  min="1"
+                  max="500"
+                  step="0.1"
+                  required
+                />
+              </div>
+
+              <div class="GRUPO-FORMULARIO">
+                <label for="ALTURA-ATLETA">Altura (cm)</label>
+                <input
+                  type="number"
+                  id="ALTURA-ATLETA"
+                  min="50"
+                  max="250"
+                  required
+                />
+              </div>
+
+              <div class="GRUPO-FORMULARIO">
+                <label for="OBJETIVO-ATLETA">Objetivo físico</label>
+
+                <select id="OBJETIVO-ATLETA" required>
+                  <option value="">Seleccionar objetivo</option>
+                  <option value="HIPERTROFIA">Hipertrofia</option>
+                  <option value="FUERZA">Fuerza</option>
+                  <option value="RESISTENCIA">Resistencia</option>
+                  <option value="DEFINICION">Definición</option>
+                </select>
+              </div>
+
+              <div class="GRUPO-FORMULARIO">
+                <label for="NIVEL-ATLETA">Nivel de entrenamiento</label>
+
+                <select id="NIVEL-ATLETA" required>
+                  <option value="">Seleccionar nivel</option>
+                  <option value="PRINCIPIANTE">Principiante</option>
+                  <option value="INTERMEDIO">Intermedio</option>
+                  <option value="AVANZADO">Avanzado</option>
+                </select>
+              </div>
+
+              <div class="GRUPO-FORMULARIO">
+                <label for="FRECUENCIA-ATLETA">Frecuencia semanal</label>
+
+                <select id="FRECUENCIA-ATLETA" required>
+                  <option value="">Seleccionar días</option>
+                  <option value="2">2 días</option>
+                  <option value="3">3 días</option>
+                  <option value="4">4 días</option>
+                  <option value="5">5 días</option>
+                  <option value="6">6 días</option>
+                </select>
+              </div>
+
+              <div class="GRUPO-FORMULARIO">
+                <label for="FECHA-INGRESO">Fecha de ingreso</label>
+                <input type="date" id="FECHA-INGRESO" required />
+              </div>
+
+              <div class="GRUPO-FORMULARIO">
+                <label for="ESTADO-ATLETA">Estado</label>
+
+                <select id="ESTADO-ATLETA">
+                  <option value="ACTIVO">Activo</option>
+                  <option value="INACTIVO">Inactivo</option>
+                </select>
+              </div>
+
+              <div class="GRUPO-FORMULARIO FORMULARIO-COMPLETO">
+                <label for="OBSERVACIONES-ATLETA">Observaciones</label>
+
+                <textarea
+                  id="OBSERVACIONES-ATLETA"
+                  rows="3"
+                  placeholder="Información adicional del deportista..."
+                ></textarea>
+              </div>
+
+              <div class="ACCIONES-FORMULARIO">
+                <button type="button" id="CANCELAR-REGISTRO">CANCELAR</button>
+
+                <button type="submit" id="GUARDAR-ATLETA">
+                  GUARDAR ATLETA
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- PLANIFICACIONES -->
+
+        <section class="SECCION-PANEL" id="PLANIFICACIONES">
+          <div class="TITULO-PANEL">
+            <div>
+              <span>ORGANIZACIÓN DE ENTRENAMIENTOS</span>
+
+              <h2>PLANIFICACIONES</h2>
+
+              <p>Administrá las rutinas y los programas de tus atletas.</p>
+            </div>
+          </div>
+
+          <div class="PANEL-INFORMATIVO">
+            <h3>GESTIÓN DE RUTINAS</h3>
+
+            <p>
+              Próximamente podrás crear rutinas personalizadas, asignar
+              ejercicios y organizar los días de entrenamiento.
+            </p>
+          </div>
+        </section>
+
+        <!-- SEGUIMIENTO -->
+
+        <section class="SECCION-PANEL" id="SEGUIMIENTO">
+          <div class="TITULO-PANEL">
+            <div>
+              <span>CONTROL DE EVOLUCIÓN</span>
+
+              <h2>SEGUIMIENTO DE ATLETAS</h2>
+
+              <p>Consultá el progreso físico y deportivo de tus atletas.</p>
+            </div>
+          </div>
+
+          <div class="PANEL-INFORMATIVO">
+            <h3>EVOLUCIÓN DEPORTIVA</h3>
+
+            <p>
+              Aquí podrás consultar los registros de peso, medidas corporales y
+              evolución del entrenamiento.
+            </p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- ================================= -->
+    <!-- FICHA INDIVIDUAL DEL ATLETA -->
+    <!-- ================================= -->
+
+    <div class="FONDO-FICHA" id="FONDO-FICHA">
+      <div class="VENTANA-FICHA">
+        <!-- ENCABEZADO -->
+
+        <div class="ENCABEZADO-FICHA">
+          <div>
+            <span class="ETIQUETA-FICHA">PERFIL DEL ATLETA</span>
+
+            <h2 id="FICHA-NOMBRE-COMPLETO">Nombre del atleta</h2>
+
+            <p>Información individual y entrenamiento</p>
+          </div>
+
+          <button type="button" class="CERRAR-FICHA" id="CERRAR-FICHA">
+            &times;
+          </button>
+        </div>
+
+        <!-- CONTENIDO -->
+
+        <div class="CONTENIDO-FICHA">
+          <!-- DATOS PERSONALES -->
+
+          <section class="SECCION-FICHA">
+            <h3>DATOS PERSONALES</h3>
+
+            <div class="GRILLA-FICHA">
+              <div class="DATO-FICHA">
+                <span>Nombre</span>
+                <strong id="FICHA-NOMBRE"></strong>
+              </div>
+
+              <div class="DATO-FICHA">
+                <span>Apellido</span>
+                <strong id="FICHA-APELLIDO"></strong>
+              </div>
+
+              <div class="DATO-FICHA">
+                <span>Edad</span>
+                <strong id="FICHA-EDAD"></strong>
+              </div>
+
+              <div class="DATO-FICHA">
+                <span>Fecha de nacimiento</span>
+                <strong id="FICHA-NACIMIENTO"></strong>
+              </div>
+            </div>
+          </section>
+
+          <!-- INFORMACION FISICA -->
+
+          <section class="SECCION-FICHA">
+            <h3>INFORMACIÓN FÍSICA</h3>
+
+            <div class="GRILLA-FICHA">
+              <div class="DATO-FICHA">
+                <span>Peso corporal</span>
+                <strong id="FICHA-PESO"></strong>
+              </div>
+
+              <div class="DATO-FICHA">
+                <span>Altura</span>
+                <strong id="FICHA-ALTURA"></strong>
+              </div>
+            </div>
+          </section>
+
+          <!-- ENTRENAMIENTO -->
+
+          <section class="SECCION-FICHA">
+            <h3>DATOS DE ENTRENAMIENTO</h3>
+
+            <div class="GRILLA-FICHA">
+              <div class="DATO-FICHA">
+                <span>Objetivo</span>
+                <strong id="FICHA-OBJETIVO"></strong>
+              </div>
+
+              <div class="DATO-FICHA">
+                <span>Nivel</span>
+                <strong id="FICHA-NIVEL"></strong>
+              </div>
+
+              <div class="DATO-FICHA">
+                <span>Frecuencia semanal</span>
+                <strong id="FICHA-FRECUENCIA"></strong>
+              </div>
+            </div>
+          </section>
+
+          <!-- ESTADO Y OBSERVACIONES -->
+
+          <section class="SECCION-FICHA">
+            <h3>INFORMACIÓN ADICIONAL</h3>
+
+            <div class="GRILLA-FICHA">
+              <div class="DATO-FICHA">
+                <span>Estado</span>
+                <strong id="FICHA-ESTADO"></strong>
+              </div>
+
+              <div class="DATO-FICHA">
+                <span>Fecha de ingreso</span>
+                <strong id="FICHA-INGRESO"></strong>
+              </div>
+            </div>
+
+            <div class="OBSERVACIONES-FICHA">
+              <span>Observaciones del entrenador</span>
+
+              <p id="FICHA-OBSERVACIONES"></p>
+            </div>
+          </section>
+
+          <!-- ACCESOS FUTUROS -->
+
+          <section class="SECCION-FICHA">
+            <h3>GESTIÓN DEL ATLETA</h3>
+
+            <div class="ACCIONES-FICHA">
+              <button
+                type="button"
+                class="BOTON-PLANIFICAR"
+                id="BOTON-PLANIFICAR"
+              >
+                PLANIFICAR ENTRENAMIENTO
+              </button>
+
+              <button type="button" class="BOTON-PROGRESO" id="BOTON-PROGRESO">
+                VER PROGRESO
+              </button>
+            </div>
+
+            <!-- PLANIFICACIONES DEL ATLETA -->
+            <section class="SECCION-FICHA">
+              <h3>PLANIFICACIONES DEL ATLETA</h3>
+
+              <div
+                id="LISTA-PLANIFICACIONES-ATLETA"
+                class="LISTA-PLANIFICACIONES-ATLETA"
+              >
+                <p>Este atleta todavía no tiene rutinas asignadas.</p>
+              </div>
+            </section>
+          </section>
+        </div>
+      </div>
+    </div>
+    <!-- VENTANA DE PLANIFICACIÓN -->
+    <div class="FONDO-PLANIFICACION" id="FONDO-PLANIFICACION">
+      <div class="VENTANA-PLANIFICACION">
+        <div class="ENCABEZADO-PLANIFICACION">
+          <div>
+            <h2>PLAN DE ENTRENAMIENTO</h2>
+            <p>Crear una rutina personalizada para el atleta</p>
+          </div>
+
+          <button type="button" id="CERRAR-PLANIFICACION">&times;</button>
+        </div>
+
+        <form id="FORMULARIO-PLANIFICACION">
+          <!-- DATOS DEL ATLETA -->
+          <section class="SECCION-PLANIFICACION">
+            <h3>DATOS DEL ATLETA</h3>
+
+            <input type="hidden" id="ID-ATLETA-PLANIFICACION" />
+
+            <div class="CAMPO-PLANIFICACION">
+              <label>Atleta seleccionado</label>
+              <input type="text" id="NOMBRE-ATLETA-PLANIFICACION" readonly />
+            </div>
+          </section>
+
+          <!-- INFORMACIÓN DE LA RUTINA -->
+          <section class="SECCION-PLANIFICACION">
+            <h3>INFORMACIÓN DE LA RUTINA</h3>
+
+            <div class="CAMPO-PLANIFICACION">
+              <label for="OBJETIVO-PLANIFICACION">Objetivo</label>
+
+              <select id="OBJETIVO-PLANIFICACION" required>
+                <option value="">Seleccionar objetivo</option>
+                <option value="HIPERTROFIA">Hipertrofia</option>
+                <option value="FUERZA">Fuerza</option>
+                <option value="RESISTENCIA">Resistencia</option>
+                <option value="PERDIDA DE GRASA">Pérdida de grasa</option>
+                <option value="MANTENIMIENTO">Mantenimiento</option>
+              </select>
+            </div>
+
+            <div class="CAMPO-PLANIFICACION">
+              <label for="NOMBRE-RUTINA">Nombre de la rutina</label>
+              <input
+                type="text"
+                id="NOMBRE-RUTINA"
+                placeholder="Ej: Rutina de hipertrofia"
+                required
+              />
+            </div>
+          </section>
+
+          <!-- DÍAS DE ENTRENAMIENTO -->
+          <section class="SECCION-PLANIFICACION">
+            <h3>DÍAS DE ENTRENAMIENTO</h3>
+
+            <div class="DIAS-PLANIFICACION">
+              <label><input type="checkbox" value="LUNES" /> Lunes</label>
+              <label><input type="checkbox" value="MARTES" /> Martes</label>
+              <label
+                ><input type="checkbox" value="MIERCOLES" /> Miércoles</label
+              >
+              <label><input type="checkbox" value="JUEVES" /> Jueves</label>
+              <label><input type="checkbox" value="VIERNES" /> Viernes</label>
+              <label><input type="checkbox" value="SABADO" /> Sábado</label>
+              <label><input type="checkbox" value="DOMINGO" /> Domingo</label>
+            </div>
+          </section>
+
+          <!-- EJERCICIOS -->
+          <section class="SECCION-PLANIFICACION">
+            <h3>EJERCICIOS</h3>
+
+            <div id="LISTA-EJERCICIOS-PLANIFICACION">
+              <!-- Los ejercicios se agregarán dinámicamente -->
+            </div>
+
+            <button type="button" id="AGREGAR-EJERCICIO">
+              + AGREGAR EJERCICIO
+            </button>
+          </section>
+
+          <!-- OBSERVACIONES -->
+          <section class="SECCION-PLANIFICACION">
+            <h3>OBSERVACIONES</h3>
+
+            <textarea
+              id="OBSERVACIONES-PLANIFICACION"
+              placeholder="Indicaciones adicionales para el atleta..."
+            ></textarea>
+          </section>
+
+          <!-- ACCIONES -->
+          <div class="ACCIONES-PLANIFICACION">
+            <button type="submit" id="GUARDAR-PLANIFICACION">
+              GUARDAR PLANIFICACIÓN
+            </button>
+
+            <button type="button" id="CANCELAR-PLANIFICACION">CANCELAR</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- MODAL DE PROGRESO DEL ATLETA -->
+
+    <div class="FONDO-PROGRESO" id="FONDO-PROGRESO">
+      <div class="MODAL-PROGRESO">
+        <div class="ENCABEZADO-PROGRESO">
+          <h2>SEGUIMIENTO DEL PROGRESO</h2>
+
+          <button type="button" id="CERRAR-PROGRESO">×</button>
+        </div>
+
+        <div class="DATOS-PROGRESO">
+          <h3>REGISTRAR EVOLUCIÓN</h3>
+
+          <form id="FORMULARIO-PROGRESO">
+            <div class="CAMPO-PROGRESO">
+              <label for="FECHA-PROGRESO">FECHA</label>
+
+              <input type="date" id="FECHA-PROGRESO" required />
+            </div>
+
+            <div class="CAMPO-PROGRESO">
+              <label for="PESO-PROGRESO">PESO CORPORAL (KG)</label>
+
+              <input
+                type="number"
+                id="PESO-PROGRESO"
+                placeholder="Ej: 75.5"
+                step="0.1"
+                min="1"
+                required
+              />
+            </div>
+
+            <div class="CAMPO-PROGRESO">
+              <label for="OBSERVACIONES-PROGRESO"> OBSERVACIONES </label>
+
+              <textarea
+                id="OBSERVACIONES-PROGRESO"
+                placeholder="Comentarios sobre la evolución del atleta..."
+              ></textarea>
+            </div>
+
+            <button type="submit" id="GUARDAR-PROGRESO">
+              GUARDAR REGISTRO
+            </button>
+          </form>
+        </div>
+
+        <div class="HISTORIAL-PROGRESO">
+          <h3>HISTORIAL DE EVOLUCIÓN</h3>
+
+          <div id="LISTA-PROGRESO">
+            <p>Todavía no hay registros de progreso.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+
+    <script src="PLANIFICACION.js"></script>
+  </body>
+</html>

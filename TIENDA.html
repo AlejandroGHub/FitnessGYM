@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>FITNESSGYM | Tienda</title>
+
+    <link rel="stylesheet" href="TIENDA.css" />
+
+    <script src="TIENDA.js" defer></script>
+  </head>
+
+  <body>
+    <!-- ENCABEZADO -->
+
+    <header class="ENCABEZADO">
+      <!-- LOGO -->
+
+      <div class="LOGO">FITNESS<span>GYM</span></div>
+
+      <!-- BOTON DEL MENU -->
+      <!-- BOTON DEL CARRITO -->
+
+      <button class="BOTON-CARRITO-ENCABEZADO" id="BOTON-ABRIR-CARRITO">
+        🛒
+
+        <span id="CONTADOR-CARRITO">0</span>
+      </button>
+
+      <button class="BOTON-MENU" id="BOTON-MENU">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- MENU DESPLEGABLE -->
+
+      <nav class="MENU-DESPLEGABLE" id="MENU-DESPLEGABLE">
+        <a href="FITNESS.html">INICIO</a>
+
+        <a href="RUTINA.html">ENTRENAMIENTO</a>
+
+        <a href="CONTACTO.html">CONTACTO</a>
+      </nav>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+
+    <main class="CONTENIDO-PRINCIPAL">
+      <!-- BUSCADOR -->
+
+      <section class="SECCION-BUSCADOR">
+        <div class="CONTENEDOR-BUSCADOR">
+          <input
+            type="text"
+            id="BUSCADOR-PRODUCTOS"
+            placeholder="BUSCAR PRODUCTOS..."
+          />
+
+          <button id="BOTON-BUSCAR">🔍</button>
+        </div>
+        <!-- ORDENAMIENTO DE PRODUCTOS -->
+
+        <!-- CONTROLES DE TIENDA -->
+
+        <div class="CONTROLES-TIENDA">
+          <div class="FILTRO-CATEGORIA">
+            <label for="FILTRAR-CATEGORIA">CATEGORÍA:</label>
+
+            <select id="FILTRAR-CATEGORIA">
+              <option value="TODOS">TODOS LOS PRODUCTOS</option>
+
+              <option value="INDUMENTARIA">INDUMENTARIA</option>
+
+              <option value="ACCESORIOS">ACCESORIOS</option>
+            </select>
+          </div>
+
+          <div class="ORDEN-CATEGORIA">
+            <label for="ORDENAR-PRODUCTOS">ORDENAR POR:</label>
+
+            <select id="ORDENAR-PRODUCTOS">
+              <option value="ORIGINAL">ORDEN ORIGINAL</option>
+
+              <option value="MENOR-PRECIO">MENOR PRECIO</option>
+
+              <option value="MAYOR-PRECIO">MAYOR PRECIO</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <!-- INDUMENTARIA DEPORTIVA -->
+
+      <section class="SECCION-PRODUCTOS" id="INDUMENTARIA">
+        <!-- ENCABEZADO DE LA SECCION -->
+
+        <p class="SIN-RESULTADOS" id="SIN-RESULTADOS-INDUMENTARIA">
+          NO SE ENCONTRARON PRODUCTOS.
+        </p>
+
+        <div class="ENCABEZADO-SECCION">
+          <h1>INDUMENTARIA <span>DEPORTIVA</span></h1>
+
+          <p>PRENDAS PARA SUPERAR TUS LÍMITES</p>
+        </div>
+
+        <!-- CONTENEDOR DE PRODUCTOS -->
+
+        <div class="CONTENEDOR-PRODUCTOS">
+          <!-- PRODUCTO 1 -->
+
+          <article class="TARJETA-PRODUCTO" data-producto="remera">
+            <div class="IMAGEN-PRODUCTO">
+              <span class="ETIQUETA-PRODUCTO">NUEVO</span>
+
+              <img src="IMG/TIENDA/REMERA-NIKE.webp" alt="Remera deportiva" />
+            </div>
+
+            <div class="INFORMACION-PRODUCTO">
+              <p class="CATEGORIA-PRODUCTO">INDUMENTARIA</p>
+
+              <h3>REMERA DEPORTIVA</h3>
+
+              <p class="PRECIO-PRODUCTO">Sin stock</p>
+
+              <button class="BOTON-PRODUCTO">VER PRODUCTO</button>
+            </div>
+          </article>
+
+          <!-- PRODUCTO 2 -->
+
+          <article class="TARJETA-PRODUCTO" data-producto="musculosa">
+            <div class="IMAGEN-PRODUCTO">
+              <span class="ETIQUETA-PRODUCTO">DESTACADO</span>
+
+              <img src="IMG/TIENDA/MUSCULOSA.webp" alt="Musculosa deportiva" />
+            </div>
+
+            <div class="INFORMACION-PRODUCTO">
+              <p class="CATEGORIA-PRODUCTO">INDUMENTARIA</p>
+
+              <h3>MUSCULOSA FITNESS</h3>
+
+              <p class="PRECIO-PRODUCTO">Sin stock</p>
+
+              <button class="BOTON-PRODUCTO">VER PRODUCTO</button>
+            </div>
+          </article>
+
+          <!-- PRODUCTO 3 -->
+
+          <article class="TARJETA-PRODUCTO" data-producto="short">
+            <div class="IMAGEN-PRODUCTO">
+              <img src="IMG/TIENDA/SHORT FITNESS.jpg" alt="Short deportivo" />
+            </div>
+
+            <div class="INFORMACION-PRODUCTO">
+              <p class="CATEGORIA-PRODUCTO">INDUMENTARIA</p>
+
+              <h3>SHORT DEPORTIVO</h3>
+
+              <p class="PRECIO-PRODUCTO">Sin stock</p>
+
+              <button class="BOTON-PRODUCTO">VER PRODUCTO</button>
+            </div>
+          </article>
+
+          <!-- PRODUCTO 4 -->
+
+          <article class="TARJETA-PRODUCTO" data-producto="pantalon">
+            <div class="IMAGEN-PRODUCTO">
+              <span class="ETIQUETA-PRODUCTO">OFERTA</span>
+
+              <img src="IMG/TIENDA/JOGGER FIT.webp" alt="Pantalón deportivo" />
+            </div>
+
+            <div class="INFORMACION-PRODUCTO">
+              <p class="CATEGORIA-PRODUCTO">INDUMENTARIA</p>
+
+              <h3>PANTALÓN JOGGER</h3>
+
+              <p class="PRECIO-PRODUCTO">Sin stock</p>
+
+              <button class="BOTON-PRODUCTO">VER PRODUCTO</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ACCESORIOS FITNESS -->
+
+      <section class="SECCION-PRODUCTOS" id="ACCESORIOS">
+        <!-- ENCABEZADO DE LA SECCION -->
+
+        <p class="SIN-RESULTADOS" id="SIN-RESULTADOS-ACCESORIOS">
+          NO SE ENCONTRARON PRODUCTOS.
+        </p>
+
+        <div class="ENCABEZADO-SECCION">
+          <h2>ACCESORIOS <span>FITNESS</span></h2>
+
+          <p>TODO LO QUE NECESITÁS PARA ENTRENAR</p>
+        </div>
+
+        <!-- CONTENEDOR DE PRODUCTOS -->
+
+        <div class="CONTENEDOR-PRODUCTOS">
+          <!-- PRODUCTO 1: GUANTES -->
+
+          <article class="TARJETA-PRODUCTO" data-producto="guantes">
+            <div class="IMAGEN-PRODUCTO">
+              <span class="ETIQUETA-PRODUCTO">DESTACADO</span>
+
+              <img
+                src="IMG/TIENDA/GUANTES GYM.webp"
+                alt="Guantes de entrenamiento"
+              />
+            </div>
+
+            <div class="INFORMACION-PRODUCTO">
+              <p class="CATEGORIA-PRODUCTO">ACCESORIOS</p>
+
+              <h3>GUANTES DE GIMNASIO</h3>
+
+              <p class="PRECIO-PRODUCTO">Sin stock</p>
+
+              <button class="BOTON-PRODUCTO">VER PRODUCTO</button>
+            </div>
+          </article>
+
+          <!-- PRODUCTO 2: STRAPS -->
+
+          <article class="TARJETA-PRODUCTO" data-producto="straps">
+            <div class="IMAGEN-PRODUCTO">
+              <img src="IMG/TIENDA/STRAPS.webp" alt="Straps de entrenamiento" />
+            </div>
+
+            <div class="INFORMACION-PRODUCTO">
+              <p class="CATEGORIA-PRODUCTO">ACCESORIOS</p>
+
+              <h3>STRAPS DE AGARRE</h3>
+
+              <p class="PRECIO-PRODUCTO">Sin stock</p>
+
+              <button class="BOTON-PRODUCTO">VER PRODUCTO</button>
+            </div>
+          </article>
+
+          <!-- PRODUCTO 3: CINTURON -->
+
+          <article class="TARJETA-PRODUCTO" data-producto="cinturon">
+            <div class="IMAGEN-PRODUCTO">
+              <span class="ETIQUETA-PRODUCTO">NUEVO</span>
+
+              <img
+                src="IMG/TIENDA/CINTURON FITNESS.webp"
+                alt="Cinturón lumbar de entrenamiento"
+              />
+            </div>
+
+            <div class="INFORMACION-PRODUCTO">
+              <p class="CATEGORIA-PRODUCTO">ACCESORIOS</p>
+
+              <h3>CINTURÓN LUMBAR</h3>
+
+              <p class="PRECIO-PRODUCTO">Sin stock</p>
+
+              <button class="BOTON-PRODUCTO">VER PRODUCTO</button>
+            </div>
+          </article>
+
+          <!-- PRODUCTO 4: SHAKER -->
+
+          <article class="TARJETA-PRODUCTO" data-producto="shaker">
+            <div class="IMAGEN-PRODUCTO">
+              <img src="IMG/TIENDA/SHAKER FITNESS.jpg" alt="Shaker deportivo" />
+            </div>
+
+            <div class="INFORMACION-PRODUCTO">
+              <p class="CATEGORIA-PRODUCTO">ACCESORIOS</p>
+
+              <h3>SHAKER FITNESS</h3>
+
+              <p class="PRECIO-PRODUCTO">Sin stock</p>
+
+              <button class="BOTON-PRODUCTO">VER PRODUCTO</button>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- PIE DE PAGINA -->
+
+    <footer class="PIE-DE-PAGINA">
+      <!-- VENTANA DE PRODUCTO -->
+
+      <div class="FONDO-MODAL" id="FONDO-MODAL">
+        <div class="VENTANA-PRODUCTO">
+          <!-- BOTON CERRAR -->
+
+          <button class="CERRAR-MODAL" id="CERRAR-MODAL">&times;</button>
+
+          <!-- IMAGEN -->
+
+          <div class="MODAL-IMAGEN">
+            <img id="MODAL-IMAGEN" src="" alt="Producto" />
+          </div>
+
+          <!-- INFORMACION -->
+
+          <div class="MODAL-INFORMACION">
+            <p class="CATEGORIA-PRODUCTO" id="MODAL-CATEGORIA">FITNESSGYM</p>
+
+            <h2 id="MODAL-NOMBRE">PRODUCTO</h2>
+
+            <p class="MODAL-DESCRIPCION" id="MODAL-DESCRIPCION">
+              Descripción del producto.
+            </p>
+
+            <p class="MODAL-PRECIO" id="MODAL-PRECIO">$0</p>
+
+            <!-- TALLES -->
+
+            <div class="OPCION-PRODUCTO" id="CONTENEDOR-TALLES">
+              <label for="SELECTOR-TALLE">TALLE</label>
+
+              <select id="SELECTOR-TALLE">
+                <option value="">Seleccionar talle</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+              </select>
+            </div>
+
+            <!-- COLORES -->
+
+            <div class="OPCION-PRODUCTO">
+              <label for="SELECTOR-COLOR">COLOR</label>
+
+              <select id="SELECTOR-COLOR">
+                <option value="">Seleccionar color</option>
+                <option value="Negro">Negro</option>
+                <option value="Blanco">Blanco</option>
+                <option value="Gris">Gris</option>
+              </select>
+            </div>
+
+            <!-- AGREGAR AL CARRITO -->
+
+            <button class="BOTON-CARRITO" id="BOTON-CARRITO">
+              AGREGAR AL CARRITO
+            </button>
+
+            <p id="MENSAJE-CARRITO"></p>
+          </div>
+        </div>
+        <!-- VENTANA DEL CARRITO -->
+
+        <div class="FONDO-CARRITO" id="FONDO-CARRITO">
+          <div class="VENTANA-CARRITO">
+            <div class="ENCABEZADO-CARRITO">
+              <h2>MI CARRITO</h2>
+
+              <button id="CERRAR-CARRITO">&times;</button>
+            </div>
+
+            <div class="LISTA-CARRITO" id="LISTA-CARRITO">
+              <p class="CARRITO-VACIO">TU CARRITO ESTÁ VACÍO</p>
+            </div>
+
+            <div class="RESUMEN-CARRITO">
+              <div class="TOTAL-CARRITO">
+                <span>TOTAL:</span>
+
+                <strong id="TOTAL-CARRITO">$0</strong>
+              </div>
+
+              <button id="BOTON-FINALIZAR-COMPRA">FINALIZAR COMPRA</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

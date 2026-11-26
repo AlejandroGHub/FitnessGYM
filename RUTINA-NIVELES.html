@@ -1,0 +1,796 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>FITNESSGYM | Rutinas por nivel</title>
+
+    <link rel="stylesheet" href="RUTINA-NIVELES.css" />
+
+    <script src="RUTINA-NIVELES.js" defer></script>
+  </head>
+
+  <body>
+    <!-- ENCABEZADO -->
+
+    <header class="ENCABEZADO">
+      <a href="index.html" class="LOGO"> FITNESS<span>GYM</span> </a>
+
+      <!-- BOTON DEL MENU -->
+
+      <button class="BOTON-MENU" id="BOTON-MENU" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- MENU DESPLEGABLE -->
+
+      <nav class="MENU-DESPLEGABLE" id="MENU-DESPLEGABLE">
+        <a href="index.html">INICIO</a>
+
+        <a href="TIENDA.html">TIENDA</a>
+
+        <a href="RUTINA.html">RUTINAS</a>
+
+        <a href="CONTACTO.html">CONTACTO</a>
+      </nav>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+
+    <main class="CONTENIDO-PRINCIPAL">
+      <!-- PRESENTACION -->
+
+      <section class="PORTADA-NIVEL">
+        <div class="CONTENIDO-PORTADA">
+          <p class="SUBTITULO">FITNESSGYM · ENTRENAMIENTO</p>
+
+          <h1>
+            RUTINAS POR
+            <span>NIVEL</span>
+          </h1>
+
+          <p class="DESCRIPCION">
+            Encontrá diferentes propuestas de entrenamiento organizadas según tu
+            experiencia, con ejercicios, series, repeticiones y tiempos de
+            descanso.
+          </p>
+        </div>
+      </section>
+
+      <!-- SELECCION DE NIVEL -->
+
+      <section class="SECCION-NIVELES">
+        <div class="ENCABEZADO-SECCION">
+          <p class="SUBTITULO-SECCION">PLANIFICACIÓN DEL ENTRENAMIENTO</p>
+
+          <h2>
+            ELEGÍ TU
+            <span>NIVEL</span>
+          </h2>
+
+          <p class="DESCRIPCION-SECCION">
+            Seleccioná un nivel para consultar su planificación semanal y los
+            ejercicios correspondientes a cada jornada.
+          </p>
+        </div>
+
+        <!-- TARJETAS DE NIVELES -->
+
+        <div class="CONTENEDOR-NIVELES">
+          <!-- PRINCIPIANTE -->
+
+          <article class="TARJETA-NIVEL">
+            <h3>PRINCIPIANTE</h3>
+
+            <p>
+              Planificación Full Body de tres días semanales. Orientada al
+              aprendizaje técnico y a la adaptación progresiva al entrenamiento.
+            </p>
+
+            <button class="BOTON-NIVEL" data-nivel="PRINCIPIANTE" type="button">
+              VER RUTINA
+              <span>→</span>
+            </button>
+          </article>
+
+          <!-- INTERMEDIO -->
+
+          <article class="TARJETA-NIVEL">
+            <h3>INTERMEDIO</h3>
+
+            <p>
+              Planificación Upper/Lower de cuatro días semanales. Permite
+              distribuir el trabajo entre tren superior y tren inferior.
+            </p>
+
+            <button class="BOTON-NIVEL" data-nivel="INTERMEDIO" type="button">
+              VER RUTINA
+              <span>→</span>
+            </button>
+          </article>
+
+          <!-- AVANZADO -->
+
+          <article class="TARJETA-NIVEL">
+            <h3>AVANZADO</h3>
+
+            <p>
+              Planificación Push/Pull/Legs de seis días semanales. Organiza el
+              entrenamiento según los movimientos y grupos musculares
+              trabajados.
+            </p>
+
+            <button class="BOTON-NIVEL" data-nivel="AVANZADO" type="button">
+              VER RUTINA
+              <span>→</span>
+            </button>
+          </article>
+        </div>
+
+        <!-- CONTENIDO DE LAS RUTINAS -->
+
+        <div class="CONTENIDO-NIVEL">
+          <!-- ================================= -->
+          <!-- RUTINA PRINCIPIANTE -->
+          <!-- ================================= -->
+
+          <section class="INFORMACION-NIVEL" id="PRINCIPIANTE">
+            <div class="ENCABEZADO-RUTINA">
+              <p class="ETIQUETA-RUTINA">PLANIFICACIÓN SEMANAL · 3 DÍAS</p>
+
+              <h2>FULL <span>BODY</span></h2>
+
+              <p>
+                Entrenamiento de cuerpo completo. Cada jornada trabaja
+                diferentes grupos musculares para desarrollar una base de fuerza
+                y mejorar la técnica de ejecución.
+              </p>
+            </div>
+
+            <!-- DIA 1 -->
+
+            <article class="DIA-RUTINA">
+              <button class="BOTON-DIA" type="button">
+                <span>DÍA 1 · CUERPO COMPLETO</span>
+                <span>+</span>
+              </button>
+
+              <div class="CONTENIDO-DIA">
+                <div class="EJERCICIO">
+                  <span>SENTADILLA</span>
+                  <span>3 series · 10 repeticiones</span>
+                  <span>Descanso: 90 segundos</span>
+                </div>
+
+                <div class="EJERCICIO">
+                  <span>PRESS DE BANCA</span>
+                  <span>3 series · 10 repeticiones</span>
+                  <span>Descanso: 90 segundos</span>
+                </div>
+
+                <div class="EJERCICIO">
+                  <span>REMO EN POLEA</span>
+                  <span>3 series · 12 repeticiones</span>
+                  <span>Descanso: 60 segundos</span>
+                </div>
+
+                <div class="EJERCICIO">
+                  <span>PRESS DE HOMBROS</span>
+                  <span>2 series · 12 repeticiones</span>
+                  <span>Descanso: 60 segundos</span>
+                </div>
+
+                <div class="EJERCICIO">
+                  <span>CURL DE BÍCEPS</span>
+                  <span>2 series · 12 repeticiones</span>
+                  <span>Descanso: 60 segundos</span>
+                </div>
+
+                <div class="EJERCICIO">
+                  <span>PLANCHA ABDOMINAL</span>
+                  <span>2 series · 20 a 30 segundos</span>
+                  <span>Descanso: 45 segundos</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- DIA 2 -->
+
+            <article class="DIA-RUTINA">
+              <button class="BOTON-DIA" type="button">
+                <span>DÍA 2 · CUERPO COMPLETO</span>
+                <span>+</span>
+              </button>
+
+              <div class="CONTENIDO-DIA">
+                <div class="EJERCICIO">
+                  <span>PRENSA DE PIERNAS</span>
+                  <span>3 series · 12 repeticiones</span>
+                  <span>Descanso: 90 segundos</span>
+                </div>
+
+                <div class="EJERCICIO">
+                  <span>JALÓN AL PECHO</span>
+                  <span>3 series · 12 repeticiones</span>
+                  <span>Descanso: 60 segundos</span>
+                </div>
+
+                <div class="EJERCICIO">
+                  <span>PRESS INCLINADO CON MANCUERNAS</span>
+                  <span>3 series · 10 repeticiones</span>
+                  <span>Descanso: 90 segundos</span>
+                </div>
+
+                <div class="EJERCICIO">
+                  <span>EXTENSIÓN DE CUÁDRICEPS</span>
+                  <span>2 series · 12 repeticiones</span>
+                  <span>Descanso: 60 segundos</span>
+                </div>
+
+                <div class="EJERCICIO">
+                  <span>EXTENSIÓN DE TRÍCEPS EN POLEA</span>
+                  <span>2 series · 12 repeticiones</span>
+                  <span>Descanso: 60 segundos</span>
+                </div>
+
+                <div class="EJERCICIO">
+                  <span>ELEVACIÓN DE RODILLAS</span>
+                  <span>2 series · 12 repeticiones</span>
+                  <span>Descanso: 45 segundos</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- DIA 3 -->
+
+            <article class="DIA-RUTINA">
+              <button class="BOTON-DIA" type="button">
+                <span>DÍA 3 · CUERPO COMPLETO</span>
+                <span>+</span>
+              </button>
+
+              <div class="CONTENIDO-DIA">
+                <div class="EJERCICIO">
+                  <span>PESO MUERTO RUMANO</span>
+                  <span>3 series · 10 repeticiones</span>
+                  <span>Descanso: 90 segundos</span>
+                </div>
+
+                <div class="EJERCICIO">
+                  <span>PRESS DE BANCA CON MANCUERNAS</span>
+                  <span>3 series · 10 repeticiones</span>
+                  <span>Descanso: 90 segundos</span>
+                </div>
+
+                <div class="EJERCICIO">
+                  <span>REMO CON MANCUERNA</span>
+                  <span>3 series · 12 repeticiones</span>
+                  <span>Descanso: 60 segundos</span>
+                </div>
+
+                <div class="EJERCICIO">
+                  <span>CURL FEMORAL</span>
+                  <span>2 series · 12 repeticiones</span>
+                  <span>Descanso: 60 segundos</span>
+                </div>
+
+                <div class="EJERCICIO">
+                  <span>ELEVACIONES LATERALES</span>
+                  <span>2 series · 12 repeticiones</span>
+                  <span>Descanso: 60 segundos</span>
+                </div>
+
+                <div class="EJERCICIO">
+                  <span>ABDOMINALES</span>
+                  <span>2 series · 15 repeticiones</span>
+                  <span>Descanso: 45 segundos</span>
+                </div>
+              </div>
+            </article>
+          </section>
+
+          <!-- ================================= -->
+          <!-- RUTINA INTERMEDIO -->
+          <!-- ================================= -->
+
+          <section class="INFORMACION-NIVEL" id="INTERMEDIO">
+            <div class="ENCABEZADO-RUTINA">
+              <p class="ETIQUETA-RUTINA">PLANIFICACIÓN SEMANAL · 4 DÍAS</p>
+
+              <h2>UPPER / <span>LOWER</span></h2>
+
+              <p>
+                División del entrenamiento en tren superior e inferior. Permite
+                distribuir el volumen de trabajo durante cuatro jornadas
+                semanales.
+              </p>
+            </div>
+
+            <!-- DIA 1 UPPER -->
+
+            <article class="DIA-RUTINA">
+              <button class="BOTON-DIA" type="button">
+                <span>DÍA 1 · UPPER A</span>
+                <span>+</span>
+              </button>
+
+              <div class="CONTENIDO-DIA">
+                <div class="EJERCICIO">
+                  <span>PRESS DE BANCA</span>
+                  <span>3 series · 8 a 10 repeticiones</span>
+                  <span>Descanso: 120 segundos</span>
+                </div>
+
+                <div class="EJERCICIO">
+                  <span>REMO CON BARRA</span>
+                  <span>3 series · 8 a 10 repeticiones</span>
+                  <span>Descanso: 120 segundos</span>
+                </div>
+
+                <div class="EJERCICIO">
+                  <span>PRESS MILITAR</span>
+                  <span>3 series · 10 repeticiones</span>
+                  <span>Descanso: 90 segundos</span>
+                </div>
+
+                <div class="EJERCICIO">
+                  <span>JALÓN AL PECHO</span>
+                  <span>3 series · 12 repeticiones</span>
+                  <span>Descanso: 90 segundos</span>
+                </div>
+
+                <div class="EJERCICIO">
+                  <span>CURL DE BÍCEPS</span>
+                  <span>2 series · 12 repeticiones</span>
+                  <span>Descanso: 60 segundos</span>
+                </div>
+
+                <div class="EJERCICIO">
+                  <span>EXTENSIÓN DE TRÍCEPS</span>
+                  <span>2 series · 12 repeticiones</span>
+                  <span>Descanso: 60 segundos</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- DIA 2 LOWER -->
+
+            <article class="DIA-RUTINA">
+              <button class="BOTON-DIA" type="button">
+                <span>DÍA 2 · LOWER A</span>
+                <span>+</span>
+              </button>
+
+              <div class="CONTENIDO-DIA">
+                <div class="EJERCICIO">
+                  <span>SENTADILLA CON BARRA</span>
+                  <span>3 series · 8 a 10 repeticiones</span>
+                  <span>Descanso: 120 segundos</span>
+                </div>
+
+                <div class="EJERCICIO">
+                  <span>PESO MUERTO RUMANO</span>
+                  <span>3 series · 10 repeticiones</span>
+                  <span>Descanso: 120 segundos</span>
+                </div>
+
+                <div class="EJERCICIO">
+                  <span>PRENSA DE PIERNAS</span>
+                  <span>3 series · 12 repeticiones</span>
+                  <span>Descanso: 90 segundos</span>
+                </div>
+
+                <div class="EJERCICIO">
+                  <span>CURL FEMORAL</span>
+                  <span>3 series · 12 repeticiones</span>
+                  <span>Descanso: 60 segundos</span>
+                </div>
+
+                <div class="EJERCICIO">
+                  <span>ELEVACIÓN DE GEMELOS</span>
+                  <span>3 series · 15 repeticiones</span>
+                  <span>Descanso: 60 segundos</span>
+                </div>
+
+                <div class="EJERCICIO">
+                  <span>ABDOMINALES</span>
+                  <span>3 series · 15 repeticiones</span>
+                  <span>Descanso: 45 segundos</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- DIA 3 UPPER -->
+
+            <article class="DIA-RUTINA">
+              <button class="BOTON-DIA" type="button">
+                <span>DÍA 3 · UPPER B</span>
+                <span>+</span>
+              </button>
+
+              <div class="CONTENIDO-DIA">
+                <div class="EJERCICIO">
+                  <span>PRESS INCLINADO CON MANCUERNAS</span>
+                  <span>3 series · 10 repeticiones</span>
+                  <span>Descanso: 90 segundos</span>
+                </div>
+
+                <div class="EJERCICIO">
+                  <span>REMO EN POLEA</span>
+                  <span>3 series · 12 repeticiones</span>
+                  <span>Descanso: 90 segundos</span>
+                </div>
+
+                <div class="EJERCICIO">
+                  <span>ELEVACIONES LATERALES</span>
+                  <span>3 series · 12 repeticiones</span>
+                  <span>Descanso: 60 segundos</span>
+                </div>
+
+                <div class="EJERCICIO">
+                  <span>JALÓN CON AGARRE ESTRECHO</span>
+                  <span>3 series · 10 repeticiones</span>
+                  <span>Descanso: 90 segundos</span>
+                </div>
+
+                <div class="EJERCICIO">
+                  <span>CURL MARTILLO</span>
+                  <span>2 series · 12 repeticiones</span>
+                  <span>Descanso: 60 segundos</span>
+                </div>
+
+                <div class="EJERCICIO">
+                  <span>EXTENSIÓN DE TRÍCEPS CON CUERDA</span>
+                  <span>2 series · 12 repeticiones</span>
+                  <span>Descanso: 60 segundos</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- DIA 4 LOWER -->
+
+            <article class="DIA-RUTINA">
+              <button class="BOTON-DIA" type="button">
+                <span>DÍA 4 · LOWER B</span>
+                <span>+</span>
+              </button>
+
+              <div class="CONTENIDO-DIA">
+                <div class="EJERCICIO">
+                  <span>SENTADILLA HACK</span>
+                  <span>3 series · 10 repeticiones</span>
+                  <span>Descanso: 120 segundos</span>
+                </div>
+
+                <div class="EJERCICIO">
+                  <span>HIP THRUST</span>
+                  <span>3 series · 10 repeticiones</span>
+                  <span>Descanso: 90 segundos</span>
+                </div>
+
+                <div class="EJERCICIO">
+                  <span>EXTENSIÓN DE CUÁDRICEPS</span>
+                  <span>3 series · 12 repeticiones</span>
+                  <span>Descanso: 60 segundos</span>
+                </div>
+
+                <div class="EJERCICIO">
+                  <span>CURL FEMORAL</span>
+                  <span>3 series · 12 repeticiones</span>
+                  <span>Descanso: 60 segundos</span>
+                </div>
+
+                <div class="EJERCICIO">
+                  <span>ELEVACIÓN DE GEMELOS</span>
+                  <span>3 series · 15 repeticiones</span>
+                  <span>Descanso: 60 segundos</span>
+                </div>
+
+                <div class="EJERCICIO">
+                  <span>PLANCHA ABDOMINAL</span>
+                  <span>3 series · 30 segundos</span>
+                  <span>Descanso: 45 segundos</span>
+                </div>
+              </div>
+            </article>
+          </section>
+
+          <!-- ================================= -->
+          <!-- RUTINA AVANZADO -->
+          <!-- ================================= -->
+
+          <section class="INFORMACION-NIVEL" id="AVANZADO">
+            <div class="ENCABEZADO-RUTINA">
+              <p class="ETIQUETA-RUTINA">PLANIFICACIÓN SEMANAL · 6 DÍAS</p>
+
+              <h2>PUSH / PULL / <span>LEGS</span></h2>
+
+              <p>
+                División del entrenamiento en movimientos de empuje, tracción y
+                trabajo de piernas. Se organiza en dos ciclos semanales con
+                diferentes ejercicios.
+              </p>
+            </div>
+
+            <!-- DIA 1 PUSH -->
+
+            <article class="DIA-RUTINA">
+              <button class="BOTON-DIA" type="button">
+                <span>DÍA 1 · PUSH A</span>
+                <span>+</span>
+              </button>
+
+              <div class="CONTENIDO-DIA">
+                <div class="EJERCICIO">
+                  <span>PRESS DE BANCA</span>
+                  <span>3 series · 6 a 8 repeticiones</span>
+                  <span>Descanso: 120 segundos</span>
+                </div>
+
+                <div class="EJERCICIO">
+                  <span>PRESS INCLINADO</span>
+                  <span>3 series · 8 a 10 repeticiones</span>
+                  <span>Descanso: 90 segundos</span>
+                </div>
+
+                <div class="EJERCICIO">
+                  <span>PRESS MILITAR</span>
+                  <span>3 series · 8 a 10 repeticiones</span>
+                  <span>Descanso: 90 segundos</span>
+                </div>
+
+                <div class="EJERCICIO">
+                  <span>ELEVACIONES LATERALES</span>
+                  <span>3 series · 12 a 15 repeticiones</span>
+                  <span>Descanso: 60 segundos</span>
+                </div>
+
+                <div class="EJERCICIO">
+                  <span>EXTENSIÓN DE TRÍCEPS</span>
+                  <span>3 series · 10 a 12 repeticiones</span>
+                  <span>Descanso: 60 segundos</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- DIA 2 PULL -->
+
+            <article class="DIA-RUTINA">
+              <button class="BOTON-DIA" type="button">
+                <span>DÍA 2 · PULL A</span>
+                <span>+</span>
+              </button>
+
+              <div class="CONTENIDO-DIA">
+                <div class="EJERCICIO">
+                  <span>DOMINADAS O JALÓN AL PECHO</span>
+                  <span>3 series · 8 a 10 repeticiones</span>
+                  <span>Descanso: 120 segundos</span>
+                </div>
+
+                <div class="EJERCICIO">
+                  <span>REMO CON BARRA</span>
+                  <span>3 series · 8 a 10 repeticiones</span>
+                  <span>Descanso: 120 segundos</span>
+                </div>
+
+                <div class="EJERCICIO">
+                  <span>REMO EN POLEA</span>
+                  <span>3 series · 10 a 12 repeticiones</span>
+                  <span>Descanso: 90 segundos</span>
+                </div>
+
+                <div class="EJERCICIO">
+                  <span>VUELOS POSTERIORES</span>
+                  <span>3 series · 12 a 15 repeticiones</span>
+                  <span>Descanso: 60 segundos</span>
+                </div>
+
+                <div class="EJERCICIO">
+                  <span>CURL DE BÍCEPS</span>
+                  <span>3 series · 10 a 12 repeticiones</span>
+                  <span>Descanso: 60 segundos</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- DIA 3 LEGS -->
+
+            <article class="DIA-RUTINA">
+              <button class="BOTON-DIA" type="button">
+                <span>DÍA 3 · LEGS A</span>
+                <span>+</span>
+              </button>
+
+              <div class="CONTENIDO-DIA">
+                <div class="EJERCICIO">
+                  <span>SENTADILLA CON BARRA</span>
+                  <span>3 series · 6 a 8 repeticiones</span>
+                  <span>Descanso: 150 segundos</span>
+                </div>
+
+                <div class="EJERCICIO">
+                  <span>PESO MUERTO RUMANO</span>
+                  <span>3 series · 8 a 10 repeticiones</span>
+                  <span>Descanso: 120 segundos</span>
+                </div>
+
+                <div class="EJERCICIO">
+                  <span>PRENSA DE PIERNAS</span>
+                  <span>3 series · 10 a 12 repeticiones</span>
+                  <span>Descanso: 90 segundos</span>
+                </div>
+
+                <div class="EJERCICIO">
+                  <span>CURL FEMORAL</span>
+                  <span>3 series · 10 a 12 repeticiones</span>
+                  <span>Descanso: 60 segundos</span>
+                </div>
+
+                <div class="EJERCICIO">
+                  <span>ELEVACIÓN DE GEMELOS</span>
+                  <span>3 series · 12 a 15 repeticiones</span>
+                  <span>Descanso: 60 segundos</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- DIA 4 PUSH -->
+
+            <article class="DIA-RUTINA">
+              <button class="BOTON-DIA" type="button">
+                <span>DÍA 4 · PUSH B</span>
+                <span>+</span>
+              </button>
+
+              <div class="CONTENIDO-DIA">
+                <div class="EJERCICIO">
+                  <span>PRESS INCLINADO CON BARRA</span>
+                  <span>3 series · 8 a 10 repeticiones</span>
+                  <span>Descanso: 120 segundos</span>
+                </div>
+
+                <div class="EJERCICIO">
+                  <span>PRESS CON MANCUERNAS</span>
+                  <span>3 series · 10 repeticiones</span>
+                  <span>Descanso: 90 segundos</span>
+                </div>
+
+                <div class="EJERCICIO">
+                  <span>PRESS DE HOMBROS CON MANCUERNAS</span>
+                  <span>3 series · 10 repeticiones</span>
+                  <span>Descanso: 90 segundos</span>
+                </div>
+
+                <div class="EJERCICIO">
+                  <span>ELEVACIONES LATERALES EN POLEA</span>
+                  <span>3 series · 12 a 15 repeticiones</span>
+                  <span>Descanso: 60 segundos</span>
+                </div>
+
+                <div class="EJERCICIO">
+                  <span>EXTENSIÓN DE TRÍCEPS CON CUERDA</span>
+                  <span>3 series · 12 repeticiones</span>
+                  <span>Descanso: 60 segundos</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- DIA 5 PULL -->
+
+            <article class="DIA-RUTINA">
+              <button class="BOTON-DIA" type="button">
+                <span>DÍA 5 · PULL B</span>
+                <span>+</span>
+              </button>
+
+              <div class="CONTENIDO-DIA">
+                <div class="EJERCICIO">
+                  <span>JALÓN AL PECHO</span>
+                  <span>3 series · 10 repeticiones</span>
+                  <span>Descanso: 90 segundos</span>
+                </div>
+
+                <div class="EJERCICIO">
+                  <span>REMO CON MANCUERNA</span>
+                  <span>3 series · 10 repeticiones</span>
+                  <span>Descanso: 90 segundos</span>
+                </div>
+
+                <div class="EJERCICIO">
+                  <span>REMO CON AGARRE ESTRECHO</span>
+                  <span>3 series · 12 repeticiones</span>
+                  <span>Descanso: 90 segundos</span>
+                </div>
+
+                <div class="EJERCICIO">
+                  <span>VUELOS POSTERIORES</span>
+                  <span>3 series · 15 repeticiones</span>
+                  <span>Descanso: 60 segundos</span>
+                </div>
+
+                <div class="EJERCICIO">
+                  <span>CURL MARTILLO</span>
+                  <span>3 series · 10 a 12 repeticiones</span>
+                  <span>Descanso: 60 segundos</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- DIA 6 LEGS -->
+
+            <article class="DIA-RUTINA">
+              <button class="BOTON-DIA" type="button">
+                <span>DÍA 6 · LEGS B</span>
+                <span>+</span>
+              </button>
+
+              <div class="CONTENIDO-DIA">
+                <div class="EJERCICIO">
+                  <span>SENTADILLA HACK</span>
+                  <span>3 series · 10 repeticiones</span>
+                  <span>Descanso: 120 segundos</span>
+                </div>
+
+                <div class="EJERCICIO">
+                  <span>HIP THRUST</span>
+                  <span>3 series · 10 a 12 repeticiones</span>
+                  <span>Descanso: 90 segundos</span>
+                </div>
+
+                <div class="EJERCICIO">
+                  <span>EXTENSIÓN DE CUÁDRICEPS</span>
+                  <span>3 series · 12 repeticiones</span>
+                  <span>Descanso: 60 segundos</span>
+                </div>
+
+                <div class="EJERCICIO">
+                  <span>CURL FEMORAL</span>
+                  <span>3 series · 12 repeticiones</span>
+                  <span>Descanso: 60 segundos</span>
+                </div>
+
+                <div class="EJERCICIO">
+                  <span>ELEVACIÓN DE GEMELOS</span>
+                  <span>3 series · 15 repeticiones</span>
+                  <span>Descanso: 60 segundos</span>
+                </div>
+              </div>
+            </article>
+          </section>
+        </div>
+      </section>
+
+      <!-- INFORMACION FINAL -->
+
+      <section class="SECCION-AVISO">
+        <div class="CONTENIDO-AVISO">
+          <h2>
+            ¿NO SABÉS QUÉ NIVEL
+            <span>ELEGIR?</span>
+          </h2>
+
+          <p>
+            La elección de una rutina debe considerar la experiencia, la técnica
+            de ejecución, los objetivos personales y la capacidad de
+            recuperación. Estas planificaciones son ejemplos orientativos y
+            deben adaptarse a cada persona.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- PIE DE PAGINA -->
+
+    <footer class="PIE-DE-PAGINA">
+      <h3>FITNESS<span>GYM</span></h3>
+
+      <p>DISCIPLINA · CONSTANCIA · RESULTADOS</p>
+
+      <p>© 2026 FITNESSGYM · PROYECTO FITNESS</p>
+    </footer>
+  </body>
+</html>

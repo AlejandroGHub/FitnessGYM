@@ -1,0 +1,1779 @@
+/* CONFIGURACIÓN GENERAL */
+
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+
+  background-color: #101010;
+
+  color: white;
+}
+
+/* CONTENEDOR GENERAL */
+
+.PANEL-ADMINISTRATIVO {
+  display: flex;
+
+  min-height: 100vh;
+}
+
+/* BARRA LATERAL */
+
+.BARRA-LATERAL {
+  width: 250px;
+
+  min-width: 250px;
+
+  min-height: 100vh;
+
+  background-color: #151515;
+
+  border-right: 1px solid #292929;
+
+  padding: 30px 18px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+}
+
+/* LOGO */
+
+.LOGO-PANEL {
+  padding: 10px;
+
+  margin-bottom: 55px;
+}
+
+.LOGO-PANEL h1 {
+  font-size: 25px;
+
+  letter-spacing: 1px;
+}
+
+.LOGO-PANEL h1 span {
+  color: #b6f34a;
+}
+
+.LOGO-PANEL p {
+  color: #b6f34a;
+
+  font-size: 10px;
+
+  letter-spacing: 3px;
+
+  margin-top: 6px;
+}
+
+/* MENÚ */
+
+.MENU-ADMINISTRATIVO h3 {
+  color: #777;
+
+  font-size: 11px;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 20px;
+
+  padding-left: 10px;
+}
+
+.OPCIONES-ADMINISTRATIVAS {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+.OPCION-MENU {
+  text-decoration: none;
+
+  color: #999;
+
+  font-size: 13px;
+
+  font-weight: bold;
+
+  padding: 15px 12px;
+
+  border-radius: 7px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  transition: 0.3s;
+}
+
+.OPCION-MENU span {
+  font-size: 19px;
+}
+
+.OPCION-MENU:hover,
+.OPCION-MENU.ACTIVO {
+  background-color: #19352b;
+
+  color: #b6f34a;
+}
+
+.MENU-INFERIOR {
+  border-top: 1px solid #303030;
+
+  padding-top: 25px;
+}
+
+.BOTON-VOLVER {
+  display: block;
+
+  text-decoration: none;
+
+  color: #b6f34a;
+
+  font-size: 12px;
+
+  font-weight: bold;
+
+  padding: 12px;
+
+  border: 1px solid #b6f34a;
+
+  border-radius: 6px;
+
+  text-align: center;
+
+  transition: 0.3s;
+}
+
+.BOTON-VOLVER:hover {
+  background-color: #b6f34a;
+
+  color: #101010;
+}
+
+.MENU-INFERIOR p {
+  color: #666;
+
+  text-align: center;
+
+  font-size: 10px;
+
+  margin-top: 25px;
+}
+
+/* CONTENIDO PRINCIPAL */
+
+.CONTENIDO-ADMINISTRATIVO {
+  flex: 1;
+
+  min-width: 0;
+
+  padding: 35px;
+}
+
+/* ENCABEZADO */
+
+.ENCABEZADO-PANEL {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 20px;
+
+  flex-wrap: wrap;
+
+  border-bottom: 1px solid #292929;
+
+  padding-bottom: 25px;
+
+  margin-bottom: 40px;
+}
+
+.ENCABEZADO-PANEL h2 {
+  font-size: 22px;
+
+  margin-bottom: 8px;
+}
+
+.ENCABEZADO-PANEL p {
+  color: #888;
+
+  font-size: 13px;
+}
+
+.INFORMACION-ENCABEZADO {
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+
+  font-size: 11px;
+
+  color: #888;
+}
+
+.ESTADO-ADMINISTRADOR {
+  color: #b6f34a;
+
+  border: 1px solid #b6f34a;
+
+  padding: 9px 12px;
+
+  border-radius: 5px;
+}
+
+/* SECCIONES */
+
+.SECCION-PANEL {
+  margin-bottom: 55px;
+
+  scroll-margin-top: 25px;
+}
+
+.TITULO-PANEL {
+  margin-bottom: 25px;
+}
+
+.TITULO-PANEL span,
+.TITULO-ATLETAS span {
+  color: #b6f34a;
+
+  font-size: 10px;
+
+  letter-spacing: 2px;
+}
+
+.TITULO-PANEL h2,
+.TITULO-ATLETAS h2 {
+  font-size: 21px;
+
+  margin-top: 9px;
+}
+
+.TITULO-ATLETAS p,
+.TITULO-PANEL p {
+  color: #888;
+
+  font-size: 13px;
+
+  margin-top: 8px;
+}
+
+/* INDICADORES */
+
+.CONTENEDOR-INDICADORES {
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+.TARJETA-INDICADOR {
+  background-color: #151a21;
+
+  border: 1px solid #292f38;
+
+  padding: 23px;
+
+  border-radius: 12px;
+
+  transition: 0.3s;
+}
+
+.TARJETA-INDICADOR:hover {
+  border-color: #b6f34a;
+
+  transform: translateY(-3px);
+}
+
+.ICONO-INDICADOR {
+  color: #b6f34a;
+
+  font-size: 23px;
+
+  margin-bottom: 18px;
+}
+
+.TARJETA-INDICADOR p {
+  color: #888;
+
+  font-size: 10px;
+
+  letter-spacing: 1px;
+}
+
+.TARJETA-INDICADOR h3 {
+  font-size: 30px;
+
+  margin: 12px 0;
+}
+
+.TARJETA-INDICADOR > span {
+  color: #777;
+
+  font-size: 11px;
+}
+
+/* TITULO ATLETAS */
+
+.TITULO-ATLETAS {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 20px;
+
+  flex-wrap: wrap;
+
+  margin-bottom: 25px;
+}
+
+.BOTON-AGREGAR {
+  background-color: #b6f34a;
+
+  color: #101010;
+
+  border: none;
+
+  padding: 14px 20px;
+
+  border-radius: 7px;
+
+  font-size: 12px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.BOTON-AGREGAR:hover {
+  background-color: #d0ff75;
+
+  transform: translateY(-2px);
+}
+
+/* BUSCADOR Y FILTROS */
+
+.HERRAMIENTAS-ATLETAS {
+  display: flex;
+
+  gap: 12px;
+
+  flex-wrap: wrap;
+
+  margin-bottom: 25px;
+}
+
+.HERRAMIENTAS-ATLETAS input,
+.HERRAMIENTAS-ATLETAS select {
+  background-color: #151a21;
+
+  color: white;
+
+  border: 1px solid #303640;
+
+  padding: 13px;
+
+  border-radius: 7px;
+
+  font-size: 12px;
+
+  outline: none;
+}
+
+.HERRAMIENTAS-ATLETAS input {
+  flex: 1;
+
+  min-width: 200px;
+}
+
+.HERRAMIENTAS-ATLETAS select {
+  cursor: pointer;
+}
+
+.HERRAMIENTAS-ATLETAS input:focus,
+.HERRAMIENTAS-ATLETAS select:focus {
+  border-color: #b6f34a;
+}
+
+/* CONTENEDOR ATLETAS */
+
+.CONTENEDOR-ATLETAS {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+/* MENSAJE VACÍO */
+
+.MENSAJE-VACIO {
+  grid-column: 1 / -1;
+
+  text-align: center;
+
+  padding: 65px 20px;
+
+  background-color: #151a21;
+
+  border: 1px dashed #363c44;
+
+  border-radius: 12px;
+}
+
+.MENSAJE-VACIO span {
+  color: #b6f34a;
+
+  font-size: 35px;
+}
+
+.MENSAJE-VACIO h3 {
+  font-size: 15px;
+
+  margin: 15px 0;
+}
+
+.MENSAJE-VACIO p {
+  color: #888;
+
+  font-size: 12px;
+
+  line-height: 1.7;
+}
+
+/* PANELES INFORMATIVOS */
+
+.PANEL-INFORMATIVO {
+  background-color: #151a21;
+
+  border: 1px solid #292f38;
+
+  padding: 30px;
+
+  border-radius: 10px;
+}
+
+.PANEL-INFORMATIVO h3 {
+  color: #b6f34a;
+
+  font-size: 14px;
+
+  margin-bottom: 12px;
+}
+
+.PANEL-INFORMATIVO p {
+  color: #999;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+}
+
+/* ADAPTACIÓN A TABLETS */
+
+@media (max-width: 1100px) {
+  .CONTENEDOR-INDICADORES {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ADAPTACIÓN A CELULARES */
+
+@media (max-width: 750px) {
+  .PANEL-ADMINISTRATIVO {
+    flex-direction: column;
+  }
+
+  .BARRA-LATERAL {
+    width: 100%;
+
+    min-width: 0;
+
+    min-height: auto;
+
+    padding: 20px;
+  }
+
+  .LOGO-PANEL {
+    margin-bottom: 20px;
+  }
+
+  .OPCIONES-ADMINISTRATIVAS {
+    flex-direction: row;
+
+    flex-wrap: wrap;
+  }
+
+  .OPCION-MENU {
+    font-size: 10px;
+  }
+
+  .MENU-INFERIOR {
+    display: none;
+  }
+
+  .CONTENIDO-ADMINISTRATIVO {
+    padding: 22px;
+  }
+
+  .CONTENEDOR-ATLETAS {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 450px) {
+  .CONTENEDOR-INDICADORES {
+    grid-template-columns: 1fr;
+  }
+
+  .INFORMACION-ENCABEZADO {
+    flex-wrap: wrap;
+  }
+}
+
+/* =================================
+   MODAL DE REGISTRO DE ATLETAS
+================================= */
+
+.FONDO-MODAL {
+  display: none;
+
+  position: fixed;
+
+  inset: 0;
+
+  background-color: rgba(0, 0, 0, 0.85);
+
+  backdrop-filter: blur(7px);
+
+  z-index: 1000;
+
+  justify-content: center;
+
+  align-items: center;
+
+  padding: 20px;
+
+  overflow-y: auto;
+}
+
+.FONDO-MODAL.VISIBLE {
+  display: flex;
+}
+
+.CONTENEDOR-MODAL {
+  background-color: #151a21;
+
+  border: 1px solid #303640;
+
+  width: 100%;
+
+  max-width: 750px;
+
+  max-height: 90vh;
+
+  overflow-y: auto;
+
+  border-radius: 13px;
+
+  padding: 30px;
+}
+
+.ENCABEZADO-MODAL {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-start;
+
+  margin-bottom: 30px;
+}
+
+.ENCABEZADO-MODAL span {
+  color: #b6f34a;
+
+  font-size: 10px;
+
+  letter-spacing: 2px;
+}
+
+.ENCABEZADO-MODAL h2 {
+  margin-top: 10px;
+
+  font-size: 22px;
+}
+
+.ENCABEZADO-MODAL p {
+  color: #888;
+
+  font-size: 12px;
+
+  margin-top: 8px;
+}
+
+.ENCABEZADO-MODAL button {
+  background: none;
+
+  border: none;
+
+  color: #aaa;
+
+  font-size: 22px;
+
+  cursor: pointer;
+}
+
+/* FORMULARIO */
+
+#FORMULARIO-ATLETA {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+.GRUPO-FORMULARIO {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 9px;
+}
+
+.GRUPO-FORMULARIO label {
+  color: #ccc;
+
+  font-size: 12px;
+
+  font-weight: bold;
+}
+
+.GRUPO-FORMULARIO input,
+.GRUPO-FORMULARIO select,
+.GRUPO-FORMULARIO textarea {
+  width: 100%;
+
+  padding: 13px;
+
+  background-color: #101010;
+
+  border: 1px solid #303640;
+
+  border-radius: 6px;
+
+  color: white;
+
+  font-size: 13px;
+
+  outline: none;
+}
+
+.GRUPO-FORMULARIO input:focus,
+.GRUPO-FORMULARIO select:focus,
+.GRUPO-FORMULARIO textarea:focus {
+  border-color: #b6f34a;
+}
+
+.GRUPO-FORMULARIO textarea {
+  resize: vertical;
+}
+
+.FORMULARIO-COMPLETO {
+  grid-column: 1 / -1;
+}
+
+/* BOTONES DEL FORMULARIO */
+
+.ACCIONES-FORMULARIO {
+  grid-column: 1 / -1;
+
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 12px;
+
+  margin-top: 10px;
+}
+
+.ACCIONES-FORMULARIO button {
+  padding: 13px 20px;
+
+  border-radius: 6px;
+
+  font-size: 11px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+#CANCELAR-REGISTRO {
+  background: transparent;
+
+  border: 1px solid #555;
+
+  color: white;
+}
+
+#GUARDAR-ATLETA {
+  background-color: #b6f34a;
+
+  border: none;
+
+  color: #101010;
+}
+
+/* =================================
+   TARJETAS DE ATLETAS
+================================= */
+
+.TARJETA-ATLETA {
+  background-color: #151a21;
+
+  border: 1px solid #303640;
+
+  border-radius: 12px;
+
+  padding: 22px;
+
+  transition: 0.3s;
+}
+
+.TARJETA-ATLETA:hover {
+  border-color: #b6f34a;
+
+  transform: translateY(-3px);
+}
+
+.ENCABEZADO-ATLETA {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  margin-bottom: 20px;
+}
+
+.AVATAR-ATLETA {
+  width: 48px;
+
+  height: 48px;
+
+  border-radius: 50%;
+
+  background-color: #263c27;
+
+  color: #b6f34a;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  font-size: 17px;
+
+  font-weight: bold;
+}
+
+.DATOS-NOMBRE-ATLETA h3 {
+  font-size: 15px;
+
+  margin-bottom: 6px;
+}
+
+.DATOS-NOMBRE-ATLETA p {
+  font-size: 11px;
+
+  color: #888;
+}
+
+.ESTADO-ATLETA {
+  margin-left: auto;
+
+  font-size: 10px;
+
+  padding: 7px 10px;
+
+  border-radius: 5px;
+
+  background-color: #193b27;
+
+  color: #b6f34a;
+}
+
+.ESTADO-ATLETA.INACTIVO {
+  background-color: #402727;
+
+  color: #ff8585;
+}
+
+.INFORMACION-ATLETA {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 15px;
+
+  border-top: 1px solid #303640;
+
+  padding-top: 18px;
+}
+
+.DATO-ATLETA span {
+  display: block;
+
+  color: #888;
+
+  font-size: 10px;
+
+  margin-bottom: 6px;
+}
+
+.DATO-ATLETA strong {
+  font-size: 12px;
+}
+
+.ACCIONES-ATLETA {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-top: 20px;
+
+  border-top: 1px solid #303640;
+
+  padding-top: 16px;
+}
+
+.ACCIONES-ATLETA button {
+  flex: 1;
+
+  padding: 10px 7px;
+
+  border-radius: 5px;
+
+  border: 1px solid #3b424b;
+
+  background-color: transparent;
+
+  color: #ccc;
+
+  font-size: 10px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.ACCIONES-ATLETA button:hover {
+  border-color: #b6f34a;
+
+  color: #b6f34a;
+}
+
+.ACCIONES-ATLETA .BOTON-ELIMINAR:hover {
+  border-color: #ff6666;
+
+  color: #ff6666;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+  #FORMULARIO-ATLETA {
+    grid-template-columns: 1fr;
+  }
+
+  .FORMULARIO-COMPLETO {
+    grid-column: auto;
+  }
+
+  .CONTENEDOR-MODAL {
+    padding: 20px;
+  }
+
+  .ACCIONES-FORMULARIO {
+    flex-direction: column;
+  }
+}
+
+/* ================================= */
+/* FICHA INDIVIDUAL DEL ATLETA */
+/* ================================= */
+
+.FONDO-FICHA {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.8);
+
+  backdrop-filter: blur(8px);
+
+  display: none;
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+
+  z-index: 9999;
+}
+
+.FONDO-FICHA.ACTIVO {
+  display: flex;
+}
+
+/* VENTANA */
+
+.VENTANA-FICHA {
+  width: 100%;
+  max-width: 850px;
+
+  max-height: 90vh;
+
+  overflow-y: auto;
+
+  background: #151515;
+
+  border: 1px solid #303030;
+
+  border-radius: 15px;
+
+  box-shadow: 0 15px 60px rgba(0, 0, 0, 0.6);
+
+  animation: APARECER-FICHA 0.25s ease;
+}
+
+@keyframes APARECER-FICHA {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ENCABEZADO */
+
+.ENCABEZADO-FICHA {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-start;
+
+  padding: 25px;
+
+  border-bottom: 1px solid #303030;
+}
+
+.ETIQUETA-FICHA {
+  color: #b6f34a;
+
+  font-size: 11px;
+
+  font-weight: bold;
+
+  letter-spacing: 2px;
+}
+
+.ENCABEZADO-FICHA h2 {
+  color: white;
+
+  font-size: 25px;
+
+  margin: 10px 0;
+}
+
+.ENCABEZADO-FICHA p {
+  color: #999;
+
+  font-size: 13px;
+}
+
+.CERRAR-FICHA {
+  background: #252525;
+
+  border: none;
+
+  color: white;
+
+  font-size: 27px;
+
+  width: 38px;
+  height: 38px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.CERRAR-FICHA:hover {
+  background: #b6f34a;
+
+  color: #101010;
+}
+
+/* CONTENIDO */
+
+.CONTENIDO-FICHA {
+  padding: 25px;
+}
+
+.SECCION-FICHA {
+  margin-bottom: 25px;
+}
+
+.SECCION-FICHA h3 {
+  color: #b6f34a;
+
+  font-size: 13px;
+
+  letter-spacing: 1px;
+
+  margin-bottom: 15px;
+}
+
+/* GRILLA */
+
+.GRILLA-FICHA {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 12px;
+}
+
+.DATO-FICHA {
+  background: #202020;
+
+  border: 1px solid #303030;
+
+  border-radius: 9px;
+
+  padding: 15px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.DATO-FICHA span {
+  color: #888;
+
+  font-size: 12px;
+}
+
+.DATO-FICHA strong {
+  color: white;
+
+  font-size: 15px;
+
+  font-weight: 600;
+}
+
+/* OBSERVACIONES */
+
+.OBSERVACIONES-FICHA {
+  background: #202020;
+
+  border: 1px solid #303030;
+
+  border-radius: 9px;
+
+  padding: 15px;
+
+  margin-top: 12px;
+}
+
+.OBSERVACIONES-FICHA span {
+  color: #888;
+
+  font-size: 12px;
+}
+
+.OBSERVACIONES-FICHA p {
+  color: white;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+
+  margin-top: 10px;
+}
+
+/* ACCIONES */
+
+/* ACCIONES */
+
+.ACCIONES-FICHA {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.ACCIONES-FICHA button {
+  flex: 1;
+  min-width: 180px;
+  padding: 13px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  opacity: 1;
+
+  transition: 0.3s;
+}
+
+.BOTON-PLANIFICAR {
+  background: #b6f34a;
+  color: #101010;
+  border: none;
+}
+
+.BOTON-PLANIFICAR:hover {
+  background: #d0ff75;
+  transform: translateY(-2px);
+}
+
+.BOTON-PROGRESO {
+  background: transparent;
+  color: white;
+  border: 1px solid #b6f34a;
+}
+
+.BOTON-PROGRESO:hover {
+  background: #b6f34a;
+  color: #101010;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+  .GRILLA-FICHA {
+    grid-template-columns: 1fr;
+  }
+
+  .ENCABEZADO-FICHA h2 {
+    font-size: 20px;
+  }
+
+  .CONTENIDO-FICHA {
+    padding: 18px;
+  }
+}
+
+/* =====================================
+   VENTANA DE PLANIFICACIÓN
+===================================== */
+
+.FONDO-PLANIFICACION {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 10000;
+}
+
+.FONDO-PLANIFICACION.ACTIVO {
+  display: flex;
+}
+
+.VENTANA-PLANIFICACION {
+  background: #151515;
+  color: white;
+  width: 100%;
+  max-width: 850px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 30px;
+  border: 1px solid #333;
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+  animation: APARECER-PLANIFICACION 0.3s ease;
+}
+
+@keyframes APARECER-PLANIFICACION {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ENCABEZADO */
+
+.ENCABEZADO-PLANIFICACION {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #333;
+  padding-bottom: 20px;
+  margin-bottom: 25px;
+}
+
+.ENCABEZADO-PLANIFICACION h2 {
+  color: #b6f34a;
+  margin: 0;
+}
+
+.ENCABEZADO-PLANIFICACION p {
+  color: #aaa;
+  margin: 8px 0 0;
+}
+
+#CERRAR-PLANIFICACION {
+  background: transparent;
+  color: white;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+#CERRAR-PLANIFICACION:hover {
+  color: #b6f34a;
+}
+
+/* SECCIONES */
+
+.SECCION-PLANIFICACION {
+  margin-bottom: 30px;
+}
+
+.SECCION-PLANIFICACION h3 {
+  color: #b6f34a;
+  font-size: 16px;
+  margin-bottom: 18px;
+  border-left: 3px solid #b6f34a;
+  padding-left: 10px;
+}
+
+/* CAMPOS */
+
+.CAMPO-PLANIFICACION {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.CAMPO-PLANIFICACION label {
+  color: #ccc;
+  font-size: 14px;
+}
+
+.CAMPO-PLANIFICACION input,
+.CAMPO-PLANIFICACION select,
+#OBSERVACIONES-PLANIFICACION {
+  width: 100%;
+  box-sizing: border-box;
+  background: #202020;
+  color: white;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 12px;
+  outline: none;
+}
+
+.CAMPO-PLANIFICACION input:focus,
+.CAMPO-PLANIFICACION select:focus,
+#OBSERVACIONES-PLANIFICACION:focus {
+  border-color: #b6f34a;
+}
+
+/* DÍAS DE ENTRENAMIENTO */
+
+.DIAS-PLANIFICACION {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.DIAS-PLANIFICACION label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #202020;
+  padding: 12px;
+  border-radius: 8px;
+  color: #ddd;
+  cursor: pointer;
+}
+
+.DIAS-PLANIFICACION input {
+  accent-color: #b6f34a;
+}
+
+/* EJERCICIOS */
+
+#LISTA-EJERCICIOS-PLANIFICACION {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+#AGREGAR-EJERCICIO {
+  background: transparent;
+  color: #b6f34a;
+  border: 1px solid #b6f34a;
+  border-radius: 8px;
+  padding: 12px 18px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+#AGREGAR-EJERCICIO:hover {
+  background: #b6f34a;
+  color: #101010;
+}
+
+/* OBSERVACIONES */
+
+#OBSERVACIONES-PLANIFICACION {
+  min-height: 110px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+/* BOTONES */
+
+.ACCIONES-PLANIFICACION {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+#GUARDAR-PLANIFICACION {
+  background: #b6f34a;
+  color: #101010;
+  border: none;
+  border-radius: 8px;
+  padding: 13px 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#CANCELAR-PLANIFICACION {
+  background: #292929;
+  color: white;
+  border: 1px solid #555;
+  border-radius: 8px;
+  padding: 13px 20px;
+  cursor: pointer;
+}
+
+#GUARDAR-PLANIFICACION:hover {
+  background: #a2dc38;
+}
+
+#CANCELAR-PLANIFICACION:hover {
+  background: #3a3a3a;
+}
+
+/* DISEÑO RESPONSIVE */
+
+@media (max-width: 600px) {
+  .VENTANA-PLANIFICACION {
+    padding: 20px;
+  }
+
+  .DIAS-PLANIFICACION {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ACCIONES-PLANIFICACION {
+    flex-direction: column;
+  }
+
+  .ACCIONES-PLANIFICACION button {
+    width: 100%;
+  }
+}
+
+/* =====================================
+   TARJETAS DE PLANIFICACIÓN DEL ATLETA
+===================================== */
+
+.LISTA-PLANIFICACIONES-ATLETA {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.TARJETA-PLANIFICACION {
+  background: #181818;
+  border: 1px solid #333;
+  border-left: 4px solid #b6f34a;
+  border-radius: 12px;
+  padding: 22px;
+  transition: 0.3s;
+}
+
+.TARJETA-PLANIFICACION:hover {
+  border-color: #b6f34a;
+  transform: translateY(-2px);
+}
+
+.ENCABEZADO-TARJETA-PLAN {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 18px;
+}
+
+.ENCABEZADO-TARJETA-PLAN h4 {
+  color: #b6f34a;
+  font-size: 18px;
+}
+
+.ENCABEZADO-TARJETA-PLAN span {
+  color: #888;
+  font-size: 12px;
+}
+
+.TARJETA-PLANIFICACION > p {
+  color: #ccc;
+  font-size: 14px;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.TARJETA-PLANIFICACION > p strong {
+  color: white;
+}
+
+.TARJETA-PLANIFICACION h5 {
+  color: #b6f34a;
+  margin: 20px 0 12px;
+  font-size: 14px;
+}
+
+.EJERCICIOS-GUARDADOS {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.DETALLE-EJERCICIO {
+  background: #222;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 14px;
+}
+
+.DETALLE-EJERCICIO strong {
+  color: white;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.DETALLE-EJERCICIO p {
+  color: #aaa;
+  font-size: 13px;
+  margin: 5px 0;
+}
+
+/* BOTONES DE CADA PLANIFICACIÓN */
+
+.ACCIONES-TARJETA-PLAN {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.BOTON-EDITAR-PLAN,
+.BOTON-ELIMINAR-PLAN {
+  padding: 10px 18px;
+  border-radius: 7px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.BOTON-EDITAR-PLAN {
+  background: #b6f34a;
+  color: #101010;
+  border: none;
+}
+
+.BOTON-EDITAR-PLAN:hover {
+  background: #a2dc38;
+}
+
+.BOTON-ELIMINAR-PLAN {
+  background: transparent;
+  color: #ff5555;
+  border: 1px solid #ff5555;
+}
+
+.BOTON-ELIMINAR-PLAN:hover {
+  background: #ff5555;
+  color: white;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+  .ENCABEZADO-TARJETA-PLAN {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ACCIONES-TARJETA-PLAN {
+    flex-direction: column;
+  }
+
+  .ACCIONES-TARJETA-PLAN button {
+    width: 100%;
+  }
+}
+
+/* ================================= */
+/* SEGUIMIENTO DEL PROGRESO */
+/* ================================= */
+
+.FONDO-PROGRESO {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 10000;
+}
+
+.FONDO-PROGRESO.ACTIVO {
+  display: flex;
+}
+
+.MODAL-PROGRESO {
+  width: 100%;
+  max-width: 750px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #151515;
+  border: 1px solid #333;
+  border-radius: 14px;
+  padding: 25px;
+  color: white;
+}
+
+.ENCABEZADO-PROGRESO {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #333;
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+}
+
+.ENCABEZADO-PROGRESO h2 {
+  color: #b6f34a;
+  font-size: 21px;
+}
+
+.ENCABEZADO-PROGRESO button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.DATOS-PROGRESO,
+.HISTORIAL-PROGRESO {
+  margin-bottom: 30px;
+}
+
+.DATOS-PROGRESO h3,
+.HISTORIAL-PROGRESO h3 {
+  color: #b6f34a;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.CAMPO-PROGRESO {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.CAMPO-PROGRESO label {
+  font-size: 13px;
+  color: #ccc;
+}
+
+.CAMPO-PROGRESO input,
+.CAMPO-PROGRESO textarea {
+  width: 100%;
+  padding: 12px;
+  background: #202020;
+  border: 1px solid #444;
+  border-radius: 7px;
+  color: white;
+  outline: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.CAMPO-PROGRESO input:focus,
+.CAMPO-PROGRESO textarea:focus {
+  border-color: #b6f34a;
+}
+
+.CAMPO-PROGRESO textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+#GUARDAR-PROGRESO {
+  width: 100%;
+  padding: 13px;
+  background: #b6f34a;
+  color: #101010;
+  border: none;
+  border-radius: 7px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#GUARDAR-PROGRESO:hover {
+  background: #a2df36;
+}
+
+#LISTA-PROGRESO {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#LISTA-PROGRESO > p {
+  color: #999;
+  font-size: 14px;
+  padding: 15px 0;
+}
+
+@media (max-width: 600px) {
+  .MODAL-PROGRESO {
+    padding: 18px;
+  }
+
+  .ENCABEZADO-PROGRESO h2 {
+    font-size: 17px;
+  }
+}
+
+/* TARJETAS DE PROGRESO */
+
+.TARJETA-PROGRESO {
+  background: #202020;
+  border: 1px solid #383838;
+  border-left: 4px solid #b6f34a;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.TARJETA-PROGRESO h4 {
+  color: #b6f34a;
+  margin-bottom: 10px;
+}
+
+.TARJETA-PROGRESO p {
+  color: #ccc;
+  font-size: 14px;
+  margin-bottom: 7px;
+  overflow-wrap: anywhere;
+}
+
+/* ACCIONES DE LOS REGISTROS */
+
+.ACCIONES-PROGRESO {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.BOTON-EDITAR-PROGRESO,
+.BOTON-ELIMINAR-PROGRESO {
+  padding: 9px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 12px;
+  transition: 0.3s;
+}
+
+.BOTON-EDITAR-PROGRESO {
+  background: #b6f34a;
+  color: #101010;
+}
+
+.BOTON-EDITAR-PROGRESO:hover {
+  background: #a2df36;
+}
+
+.BOTON-ELIMINAR-PROGRESO {
+  background: #922f2f;
+  color: white;
+}
+
+.BOTON-ELIMINAR-PROGRESO:hover {
+  background: #b83b3b;
+}

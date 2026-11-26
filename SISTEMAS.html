@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Sistemas de Entrenamiento | FITNESSGYM</title>
+
+    <link rel="stylesheet" href="SISTEMAS.css" />
+    <script src="SISTEMAS.js" defer></script>
+  </head>
+
+  <body>
+    <!-- =========================
+         ENCABEZADO Y NAVEGACIÓN
+    ========================== -->
+
+    <header class="ENCABEZADO">
+      <a href="FITNESS.html" class="LOGO"> FITNESS<span>GYM</span> </a>
+
+      <nav class="NAVEGACION" id="NAVEGACION">
+        <a href="FITNESS.html">INICIO</a>
+        <a href="TIENDA.html">TIENDA</a>
+        <a href="RUTINA.html">RUTINAS</a>
+        <a href="SISTEMAS.html" class="ACTUAL">SISTEMAS</a>
+      </nav>
+
+      <button class="BOTON-MENU" id="BOTON-MENU" type="button">☰</button>
+    </header>
+
+    <!-- =========================
+         PORTADA PRINCIPAL
+    ========================== -->
+
+    <section class="PORTADA">
+      <p class="ETIQUETA">FITNESSGYM / PLANIFICACIÓN</p>
+
+      <h1>
+        SISTEMAS DE
+        <span>ENTRENAMIENTO</span>
+      </h1>
+
+      <p>
+        Descubrí diferentes metodologías de entrenamiento, conocé cómo se
+        organizan y encontrá una estructura adecuada para tus objetivos.
+      </p>
+    </section>
+
+    <!-- =========================
+         CONTENIDO PRINCIPAL
+    ========================== -->
+
+    <main class="CONTENEDOR">
+      <!-- =========================
+             SELECTOR DE SISTEMAS
+        ========================== -->
+
+      <section class="INTRODUCCION">
+        <div class="TEXTO-INTRODUCCION">
+          <p class="ETIQUETA">TU PLAN DE ENTRENAMIENTO</p>
+
+          <h2>Elegí un sistema</h2>
+
+          <p>
+            Seleccioná una metodología para visualizar sus sesiones y
+            organización semanal.
+          </p>
+        </div>
+
+        <div class="SISTEMAS-SELECTOR">
+          <button class="BOTON-SISTEMA ACTIVO" data-sistema="UPPER-LOWER">
+            UPPER / LOWER
+          </button>
+
+          <button class="BOTON-SISTEMA" data-sistema="WEIDER">WEIDER</button>
+
+          <button class="BOTON-SISTEMA" data-sistema="PUSH-PULL">
+            PUSH / PULL
+          </button>
+
+          <button class="BOTON-SISTEMA" data-sistema="PPL">
+            PUSH / PULL / LEGS
+          </button>
+        </div>
+      </section>
+
+      <!-- =========================
+             PANEL DE PROGRESO
+        ========================== -->
+
+      <section class="PANEL-PROGRESO">
+        <div class="CABECERA-PROGRESO">
+          <div>
+            <p class="ETIQUETA">PROGRESIÓN DEL PROGRAMA</p>
+
+            <h2 id="NOMBRE-SISTEMA">UPPER / LOWER</h2>
+
+            <p id="DESCRIPCION-SISTEMA"></p>
+          </div>
+
+          <div class="CONTADOR">
+            <strong id="PORCENTAJE">0%</strong>
+
+            <span id="CONTADOR-SESIONES"> 0/16 SESIONES </span>
+          </div>
+        </div>
+
+        <div class="BARRA-PROGRESO">
+          <div id="PROGRESO-RELLENO"></div>
+        </div>
+      </section>
+
+      <!-- =========================
+             SELECTOR DE SEMANAS
+        ========================== -->
+
+      <section class="SECCION-SEMANA">
+        <div class="TITULO-SECCION">
+          <div>
+            <p class="ETIQUETA">PLANIFICACIÓN</p>
+
+            <h2>Seleccioná una semana</h2>
+          </div>
+
+          <button class="BOTON-REINICIAR" id="BOTON-REINICIAR">
+            REINICIAR PROGRESO
+          </button>
+        </div>
+
+        <div class="SEMANAS">
+          <button class="BOTON-SEMANA ACTIVO" data-semana="1">SEMANA 1</button>
+
+          <button class="BOTON-SEMANA" data-semana="2">SEMANA 2</button>
+
+          <button class="BOTON-SEMANA" data-semana="3">SEMANA 3</button>
+
+          <button class="BOTON-SEMANA" data-semana="4">SEMANA 4</button>
+        </div>
+      </section>
+
+      <!-- =========================
+             TARJETAS DE SESIONES
+        ========================== -->
+
+      <section class="SESIONES-SECCION">
+        <div class="TITULO-SECCION">
+          <div>
+            <p class="ETIQUETA">TU PLAN SEMANAL</p>
+
+            <h2 id="TITULO-SESIONES">SESIONES DE LA SEMANA 1</h2>
+          </div>
+
+          <span class="AYUDA">
+            Seleccioná una sesión para ver sus ejercicios.
+          </span>
+        </div>
+
+        <div class="TARJETAS-SESIONES" id="TARJETAS-SESIONES">
+          <!-- LAS TARJETAS SE GENERAN DESDE JAVASCRIPT -->
+        </div>
+      </section>
+
+      <!-- =========================
+             AVISO INFORMATIVO
+        ========================== -->
+
+      <div class="AVISO">
+        <strong>IMPORTANTE:</strong>
+
+        Las planificaciones presentadas son ejemplos educativos. Los ejercicios,
+        cargas, series y descansos deben adaptarse a la experiencia, técnica,
+        objetivos y recuperación de cada persona.
+      </div>
+    </main>
+
+    <!-- =========================
+         VENTANA DE DETALLES
+    ========================== -->
+
+    <div class="MODAL-FONDO" id="MODAL-FONDO">
+      <section class="MODAL">
+        <button class="BOTON-CERRAR" id="BOTON-CERRAR">×</button>
+
+        <p class="ETIQUETA" id="MODAL-ETIQUETA">DETALLE DE SESIÓN</p>
+
+        <h2 id="MODAL-TITULO"></h2>
+
+        <p class="MODAL-DESCRIPCION" id="MODAL-DESCRIPCION"></p>
+
+        <div class="LISTA-EJERCICIOS" id="LISTA-EJERCICIOS"></div>
+
+        <button class="BOTON-COMPLETAR" id="BOTON-COMPLETAR">
+          MARCAR COMO COMPLETADA
+        </button>
+      </section>
+    </div>
+
+    <!-- =========================
+         PIE DE PÁGINA
+    ========================== -->
+
+    <footer class="PIE-PAGINA">FITNESSGYM © 2026 · PROYECTO ACADÉMICO</footer>
+  </body>
+</html>

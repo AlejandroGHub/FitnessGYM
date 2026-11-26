@@ -1,0 +1,2 @@
+En la portad de la pagina hacer un panel interactivo para que usuarios puedan interactuar con la comunidad y trainers 
+Calendario, en formato pdf, contener una rutina armada y planificada para que le usuario pueda descargarlo 
